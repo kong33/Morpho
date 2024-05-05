@@ -1,28 +1,3 @@
-// {
-//   "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
-//   "plugins": ["react", "prettier"],
-//   "rules": {
-//     "prettier/prettier": "error",
-//     "react/react-in-jsx-scope": "off"
-//   },
-//   "env": {
-//     "browser": true,
-//     "es6": true,
-//     "node": true
-//   },
-//   "parserOptions": {
-//     "ecmaFeatures": {
-//       "jsx": true
-//     },
-//     "ecmaVersion": 2020,
-//     "sourceType": "module"
-//   },
-//   "settings": {
-//     "react": {
-//       "version": "detect"
-//     }
-//   }
-// }
 {
   "env": {
     "browser": true,
@@ -48,13 +23,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-    "@typescript-eslint",
-    "prettier",
-    "import"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "import"],
   "rules": {
     "react/react-in-jsx-scope": 0,
     "react/prefer-stateless-function": 0,
@@ -63,15 +32,11 @@
     "react/require-default-props": "off",
     "no-nested-ternary": 0,
     "linebreak-style": 0,
-    "max-len": [
-      "error",
-      120,
-      2,
-      { "ignoreComments": true, "ignoreUrls": true }
-    ],
+    "max-len": ["error", 120, 2, { "ignoreComments": true, "ignoreUrls": true }],
     "no-console": "off",
     "react/jsx-props-no-spreading": "off",
     "comma-dangle": ["error", "never"],
+    "no-unused-vars": "off",
     "prettier/prettier": [
       "error",
       {
@@ -90,8 +55,6 @@
       "error",
       "ignorePackages",
       {
-        "js": "never",
-        "jsx": "never",
         "ts": "never",
         "tsx": "never"
       }
@@ -99,14 +62,7 @@
     "import/order": [
       "error",
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          ["parent", "sibling"],
-          "index",
-          "unknown"
-        ],
+        "groups": ["builtin", "external", "internal", ["parent", "sibling"], "index", "unknown"],
         "pathGroups": [
           {
             "pattern": "react*,react*/**",
@@ -132,6 +88,7 @@
         "map": [
           ["@/components", "./src/components"],
           ["@/styles", "./src/styles"],
+          ["@/layouts", "./src/layouts"],
           ["@/utils", "./src/libs/utils"],
           ["@/hooks", "./src/libs/hooks"],
           ["@/contexts", "./src/libs/contexts"],
@@ -140,7 +97,7 @@
           ["@/pages", "./pages"],
           ["@/public", "./public"]
         ],
-        "extensions": [".js", ".jsx", ".json", ".tsx", ".ts"]
+        "extensions": [".json", ".tsx", ".ts"]
       }
     }
   }

@@ -1,0 +1,10 @@
+@import '@/styles/global.scss';
+.headerContainer {
+  width: 100%;
+  padding: 2.4rem;
+  .logoText {
+    color: $color-black;
+    @include pretendard-30-900;
+    text-decoration: none;
+  }
+}

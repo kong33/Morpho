@@ -20,11 +20,11 @@
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/styles/*": ["./src/styles/*"],
+      "@/layouts/*": ["./src/layouts/*"],
       "@/utils/*": ["./src/libs/utils/*"],
       "@/hooks/*": ["./src/libs/hooks/*"],
       "@/contexts/*": ["./src/libs/contexts/*"],
       "@/constants/*": ["./src/libs/constants/*"],
-      "@/apis/*": ["./src/apis/*"],
       "@/pages/*": ["./pages/*"],
       "@/public/*": ["./public/*"]
     },
