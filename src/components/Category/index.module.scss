@@ -1,0 +1,72 @@
+@import '@/styles/global.scss';
+
+.categoryContainer {
+  position: relative;
+  top: 0;
+  height: 5rem;
+  width: 100vw;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+  margin-top: 3vh;
+
+  &:hover {
+    height: auto;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  .categoryMenuWrapper {
+    height: 5rem;
+    display: flex;
+    margin: auto;
+    margin-bottom: 1vh;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    overflow: visible;
+    margin-top: 1vh;
+    .none {
+      background-color: none;
+    }
+    li {
+      width: 25vw;
+      height: 100%;
+      list-style-type: none;
+      @include pretendard-20-600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.5s ease;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.categoryContainer .detailMenu {
+  display: flex;
+  overflow: visible;
+}
+
+.categoryContainer .detailMenu ul {
+  width: 25vw;
+  margin: auto;
+  justify-content: space-around;
+  padding: 0;
+  text-align: center;
+}
+
+.categoryContainer .detailMenu ul li {
+  list-style-type: none;
+  display: block;
+  padding: 1rem;
+  @include pretendard-16-100;
+  transition: background-color 0.3s ease;
+}
+
+.categoryContainer .detailMenu ul li:hover {
+  cursor: pointer;
+  background-color: $color-category-hover;
+}
