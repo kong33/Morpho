@@ -13,12 +13,20 @@ export default function SearchBar({
   ResetButton: ReactElement;
   placeHolder: string;
 }) {
-  const { handleSearchValueChange } = useSearchKeyword();
+  const { handleSearchValueChange, handleResetButtonClick, searchValue } = useSearchKeyword();
   return (
     <div className={styles.searchBarWrapper}>
-      {Icon}
-      <input placeholder={placeHolder} className={styles.inputSection} onChange={handleSearchValueChange} {...rest} />
-      {ResetButton}
+      <div className={styles.searchBarIcon}>{Icon}</div>
+      <input
+        placeholder={placeHolder}
+        className={styles.inputSection}
+        onChange={handleSearchValueChange}
+        value={searchValue}
+        {...rest}
+      />
+      <button className={styles.closeButton} onClick={handleResetButtonClick} type="button">
+        {ResetButton}
+      </button>
     </div>
   );
 }
