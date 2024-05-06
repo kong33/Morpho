@@ -8,8 +8,8 @@ import SearchBarIcon from '@/public/svg/SearchBarIcon';
 export default function inspiration() {
   return (
     <SearchBar
-      placeHolder="키워드로 검색해보세요"
-      Icon={<SearchBarIcon width={12} height={12} />}
+      placeHolder="키워드로 검색해보세요   ex) 콘센트, 알루미늄..."
+      Icon={<SearchBarIcon width={20} height={20} />}
       ResetButton={<CloseButton width={20} height={20} />}
     />
   );

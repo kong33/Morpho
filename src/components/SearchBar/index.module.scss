@@ -1,7 +1,36 @@
 @import '@/styles/global.scss';
 
+.searchBarWrapper {
+  width: 100%;
+  padding: 4rem 16rem;
+  position: relative;
+
+  .searchBarIcon {
+    position: absolute;
+    top: 5.2rem;
+    left: 17.5rem;
+    opacity: 0.5;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 5.2rem;
+    right: 17.5rem;
+    opacity: 0.8;
+  }
+}
 .inputSection {
   width: 100%;
-  height: 2rem;
-  background-color: $color-category-hover;
+  height: 4rem;
+  background-color: transparent;
+  border: solid 0.18rem $color-category-hover;
+  border-radius: 2rem;
+  padding: 2rem 4rem;
+
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: $color-category-hover;
+  }
 }

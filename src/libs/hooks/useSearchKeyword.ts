@@ -5,6 +5,9 @@ export default function useSearchKeyword() {
   const handleSearchValueChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
   };
+  const handleResetButtonClick = () => {
+    setSearchValue('');
+  };
 
-  return { handleSearchValueChange, searchValue };
+  return { handleSearchValueChange, searchValue, handleResetButtonClick };
 }
