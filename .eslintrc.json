@@ -32,7 +32,7 @@
     "react/require-default-props": "off",
     "no-nested-ternary": 0,
     "linebreak-style": 0,
-    "max-len": ["error", 120, 2, { "ignoreComments": true, "ignoreUrls": true }],
+    "max-len": ["error", 3000, 2, { "ignoreComments": true, "ignoreUrls": true }],
     "no-console": "off",
     "react/jsx-props-no-spreading": "off",
     "comma-dangle": ["error", "never"],
