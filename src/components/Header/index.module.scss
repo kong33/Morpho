@@ -5,6 +5,8 @@
   .logoText {
     color: $color-black;
     @include pretendard-30-900;
+  }
+  a {
     text-decoration: none;
   }
 }
