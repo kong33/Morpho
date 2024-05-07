@@ -37,6 +37,15 @@
   line-height: normal;
 }
 
+@mixin pretendard-20-100 {
+  font-family: 'Pretendard-Regular';
+  font-family: 'Pretendard-Regular';
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+
 @mixin pretendard-20-600 {
   font-family: 'Pretendard-Regular';
   font-family: 'Pretendard-Regular';
@@ -45,11 +54,18 @@
   font-weight: 600;
   line-height: normal;
 }
-
 @mixin pretendard-30-900 {
   font-family: 'Pretendard-Regular';
   font-family: 'Pretendard-Regular';
   font-size: 3rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+@mixin pretendard-60-900 {
+  font-family: 'Pretendard-Regular';
+  font-family: 'Pretendard-Regular';
+  font-size: 6rem;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
