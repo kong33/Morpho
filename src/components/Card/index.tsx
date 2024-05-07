@@ -11,13 +11,22 @@ export default function Card({
   description,
   imageUrl,
   redirectUrl,
-  isTextHide = false
+  isTextHide = false,
+  className = ''
 }: CardProps) {
   return (
     <Link href={redirectUrl}>
-      <article className={styles[type]}>
-        <div>{likeIcon}</div>
-        <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" />
+      <article className={`${styles[type]} ${styles[className]}`}>
+        <div>
+          <Image
+            src={likeIcon}
+            width="10"
+            height="10"
+            alt="like
+              "
+          />
+        </div>
+        <Image src={imageUrl} fill alt={title} loading="lazy" />
         <div className={isTextHide ? styles.hide : styles.show}>
           <h1>{title}</h1>
           <p>{description}</p>
