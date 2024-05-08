@@ -1,0 +1,18 @@
+.accordionWrapper {
+  transition:
+    flex-grow 0.5s ease,
+    flex-shrink 0.5s ease;
+}
+.wide {
+  flex-grow: 2 !important; /* 클릭된 요소가 다른 요소보다 더 많은 공간을 차지하도록 설정 */
+  flex-shrink: 1 !important;
+  flex-basis: 40vw; /* 초기 기준 크기 설정 */
+  max-width: 40vw; /* 최대 너비를 40vw로 제한 */
+  transition: flex-basis 4s ease; /* 크기 변화에 대한 부드러운 트랜지션 적용 */
+}
+
+.imageWrapper {
+  width: 10vw;
+  height: 10vh;
+  position: relative;
+}
