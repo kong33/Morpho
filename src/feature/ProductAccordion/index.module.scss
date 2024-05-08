@@ -1,0 +1,24 @@
+@import '@/styles/global.scss';
+.productAccordionWrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
+  > * {
+    flex-grow: 1;
+    flex-basis: 0;
+    transition:
+      flex-grow 1s ease,
+      flex-shrink 5s ease;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+  @include tablet {
+    flex-direction: column;
+  }
+  @include mobile {
+    flex-direction: row;
+  }
+}
