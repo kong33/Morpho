@@ -13,4 +13,15 @@ export const CATEGORY_MENU = [
   { name: '문의하기', subMenus: ['Q&A', 'How to connect us | 문의'] }
 ];
 
-export const b = 'b';
+export const productData = [
+  { title: 'Wall Panel', description: '' },
+  { title: 'Aluminum Box', description: '' },
+  {
+    title: 'Manufacturing & Anodizing',
+    description: ''
+  },
+
+  { title: 'Paint & Marking', description: '' }
+];
+
+export const productAccordionBackgroundColor = ['#f6f1f1', '#afd3e2', '#19a7ce', '#146c94'];
