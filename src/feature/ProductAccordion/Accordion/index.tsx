@@ -10,14 +10,14 @@ export default function Accordion({
   imageUrl,
   onClick,
   isClicked,
-  backgroundColor
+  backgroundColor,
+  className
 }: AccordionProps) {
   const wideStyle = isClicked ? 'wide' : '';
 
   return (
     <div
-      className={`${styles.accordionWrapper} ${styles[wideStyle]}`}
-      // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+      className={`${styles.accordionWrapper} ${styles[wideStyle]} ${styles[className]}`}
       onClick={onClick}
       style={{ backgroundColor: backgroundColor }}
     >
