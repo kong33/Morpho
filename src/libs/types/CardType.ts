@@ -5,8 +5,8 @@ type CardProps = {
   title: string;
   description: string;
   imageUrl: StaticImageData;
+  isHoverAble?: boolean;
   redirectUrl?: string;
-  isTextHide?: boolean;
   className?: string;
 };
 

@@ -8,8 +8,10 @@ $cardTextWrapperHeight: 6rem;
 .innerTextFullImage {
   width: $cardWidth;
   height: $cardHeight;
+  position: relative;
 
   .textWrapper {
+    z-index: $zindex-dropdown;
     position: absolute;
     bottom: 1rem;
     color: $color-white;
@@ -46,13 +48,48 @@ $cardTextWrapperHeight: 6rem;
     }
   }
 }
+//hover 됐을 때 이미지 깜빡 거림 해결하기
 
-.full {
-  width: $cardWidth;
+.hoverAble {
+  cursor: pointer;
+  width: $cardWidth; // 이미지 크기에 맞게
   height: $cardHeight;
   position: relative;
-}
+  transition: z-index 0.3s ease;
 
+  border-radius: 1rem;
+  z-index: $zindex-modal;
+  &:hover {
+    z-index: $zindex-image-cover;
+    .textWrapper {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+  img {
+    border-radius: 1rem;
+  }
+
+  .textWrapper {
+    width: $cardWidth;
+    height: $cardHeight;
+    z-index: $zindex-dropdown;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+
+    color: $color-white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    h1 {
+      @include pretendard-24-600;
+    }
+    p {
+      @include pretendard-10-100;
+    }
+  }
+}
 .notFull {
   width: $cardWidth;
   height: $cardSemiHeight;
