@@ -3,9 +3,10 @@ import { ReactNode } from 'react';
 import Card from '@/components/Card';
 import SearchBar from '@/components/SearchBar';
 import MainLayout from '@/layouts/MainLayout';
+import imgUrl from '@/public/images/homeHero.jpg';
 import likeIcon from '@/public/images/likeIcon.png';
-import CloseButton from '@/public/svg/CloseButton';
 import SearchBarIcon from '@/public/svg/SearchBarIcon';
+import CloseButton from '@/public/svg/closeButton';
 
 export default function inspiration() {
   return (
@@ -20,7 +21,7 @@ export default function inspiration() {
         likeIcon={likeIcon}
         title="가은"
         description="gkgk"
-        imageUrl="https://img.etoday.co.kr/pto_db/2014/07/20140720045734_482347_527_297.jpg"
+        imageUrl={imgUrl}
         redirectUrl="/"
       />
     </>
