@@ -1,9 +1,13 @@
 @import '@/styles/global.scss';
 
+$cardWidth: 24rem;
+$cardHeight: 24rem;
+$cardSemiHeight: 18rem;
+$cardTextWrapperHeight: 6rem;
+
 .innerTextFullImage {
-  width: 20rem;
-  height: 20rem;
-  position: relative;
+  width: $cardWidth;
+  height: $cardHeight;
 
   .textWrapper {
     position: absolute;
@@ -20,4 +24,37 @@
       @include pretendard-10-100;
     }
   }
+}
+
+.outerTextFullImage {
+  width: $cardWidth;
+  height: $cardHeight;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  .textWrapper {
+    background-color: $color-primary1;
+    height: $cardTextWrapperHeight;
+    padding: 1rem;
+    color: $color-black;
+    border-radius: 0 0 1rem 1rem;
+    h1 {
+      @include pretendard-20-600;
+    }
+
+    p {
+      @include pretendard-10-100;
+    }
+  }
+}
+
+.full {
+  width: $cardWidth;
+  height: $cardHeight;
+  position: relative;
+}
+
+.notFull {
+  width: $cardWidth;
+  height: $cardSemiHeight;
+  position: relative;
 }

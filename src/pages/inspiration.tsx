@@ -15,7 +15,7 @@ export default function inspiration() {
         Icon={<SearchBarIcon width={20} height={20} />}
         ResetButton={<CloseButton width={20} height={20} />}
       />
-      <Card type="innerTextFullImage" title="가은" description="gkgk" imageUrl={imgUrl} redirectUrl="/" />
+      <Card type="outerTextFullImage" title="가은" description="gkgk" imageUrl={imgUrl} redirectUrl="/" />
     </>
   );
 }

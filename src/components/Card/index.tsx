@@ -20,14 +20,15 @@ export default function Card({
 }: CardProps) {
   const cardWrapper = cn(type, className, 'cardWrapper');
   const textWrapper = cn(isTextHide ? 'hide' : 'show', 'textWrapper');
+  const imageWrapper = cn(type === 'innerTextFullImage' ? 'full' : 'notFull');
 
   if (!redirectUrl) {
     return (
       <article className={cardWrapper}>
         <LikeButton />
-
-        <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" />
-
+        <div className={imageWrapper}>
+          <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" />
+        </div>
         <div className={textWrapper}>
           <h1>{title}</h1>
           <p>{description}</p>
@@ -39,9 +40,9 @@ export default function Card({
     <Link href={redirectUrl}>
       <article className={cardWrapper}>
         <LikeButton />
-
-        <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" />
-
+        <div className={imageWrapper}>
+          <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" />
+        </div>
         <div className={textWrapper}>
           <h1>{title}</h1>
           <p>{description}</p>
