@@ -1,5 +1,102 @@
+@import '@/styles/global.scss';
+
+$cardWidth: 24rem;
+$cardHeight: 24rem;
+$cardSemiHeight: 18rem;
+$cardTextWrapperHeight: 6rem;
+
 .innerTextFullImage {
-  width: 10rem;
-  height: 10rem;
+  width: $cardWidth;
+  height: $cardHeight;
+  position: relative;
+
+  .textWrapper {
+    z-index: $zindex-dropdown;
+    position: absolute;
+    bottom: 1rem;
+    color: $color-white;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    h1 {
+      @include pretendard-24-600;
+    }
+    p {
+      @include pretendard-10-100;
+    }
+  }
+}
+
+.outerTextFullImage {
+  width: $cardWidth;
+  height: $cardHeight;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  .textWrapper {
+    background-color: $color-primary1;
+    height: $cardTextWrapperHeight;
+    padding: 1rem;
+    color: $color-black;
+    border-radius: 0 0 1rem 1rem;
+    h1 {
+      @include pretendard-20-600;
+    }
+
+    p {
+      @include pretendard-10-100;
+    }
+  }
+}
+
+.cardHover {
+  padding: 0;
+
+  img {
+    border-radius: 1rem;
+    z-index: $zindex-dropdown;
+  }
+  &:hover {
+    z-index: $zindex-image-cover;
+    img {
+      z-index: $zindex-image-cover;
+    }
+  }
+  .textWrapper {
+    z-index: $zindex-image-cover;
+    width: $cardWidth;
+    height: $cardHeight;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 4rem;
+  }
+}
+// .hoverAble {
+//   cursor: pointer;
+//   width: $cardWidth; // 이미지 크기에 맞게
+//   height: $cardHeight;
+//   position: relative;
+//   transition: z-index 0.3s ease;
+
+//   border-radius: 1rem;
+//   z-index: $zindex-modal;
+//   background-color: black;
+//   &:hover {
+//     z-index: $zindex-image-cover;
+//     img {
+//       z-index: $zindex-image-cover;
+//     }
+//     .textWrapper {
+//       z-index: $zindex-fixed;
+//       background-color: rgba(0, 0, 0, 0.3);
+//     }
+//   }
+
+.notFull {
+  width: $cardWidth;
+  height: $cardSemiHeight;
   position: relative;
 }

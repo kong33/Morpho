@@ -1,37 +1,46 @@
+import classNames from 'classnames/bind';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from '@/components/Card/index.module.scss';
 import CardProps from '@/libs/types/CardType';
 
-export default function Card({
-  type,
-  likeIcon,
-  title,
-  description,
-  imageUrl,
-  redirectUrl,
-  isTextHide = false,
-  className = ''
-}: CardProps) {
-  return (
-    <Link href={redirectUrl}>
-      <article className={`${styles[type]} ${styles[className]}`}>
-        <div>
-          <Image
-            src={likeIcon}
-            width="10"
-            height="10"
-            alt="like
-              "
-          />
+import LikeButton from '../LikeButton';
+
+const cn = classNames.bind(styles);
+
+export default function Card({ type, title, description, imageUrl, redirectUrl, isHoverAble, className }: CardProps) {
+  const cardWrapper = cn(type, className, 'cardWrapper', isHoverAble ? 'cardHover' : '');
+  const textWrapper = cn('textWrapper');
+  const imageWrapper = cn(type === 'outerTextFullImage' ? 'notFull' : 'full', isHoverAble ? 'hoverAble' : '');
+
+  if (!redirectUrl) {
+    return (
+      <article className={cardWrapper}>
+        <LikeButton />
+        <div className={imageWrapper}>
+          <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" />
         </div>
-        <Image src={imageUrl} fill alt={title} loading="lazy" />
-        <div className={isTextHide ? styles.hide : styles.show}>
+        <div className={textWrapper}>
           <h1>{title}</h1>
           <p>{description}</p>
         </div>
       </article>
-    </Link>
+    );
+  }
+  return (
+    <article className={cardWrapper}>
+      <Link href={redirectUrl}>
+        <LikeButton />
+        <div className={imageWrapper}>
+          <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" />
+        </div>
+
+        <div className={textWrapper}>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </div>
+      </Link>
+    </article>
   );
 }
