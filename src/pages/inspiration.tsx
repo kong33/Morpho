@@ -4,7 +4,6 @@ import Card from '@/components/Card';
 import SearchBar from '@/components/SearchBar';
 import MainLayout from '@/layouts/MainLayout';
 import imgUrl from '@/public/images/homeHero.jpg';
-import likeIcon from '@/public/images/likeIcon.png';
 import SearchBarIcon from '@/public/svg/SearchBarIcon';
 import CloseButton from '@/public/svg/closeButton';
 
@@ -16,14 +15,7 @@ export default function inspiration() {
         Icon={<SearchBarIcon width={20} height={20} />}
         ResetButton={<CloseButton width={20} height={20} />}
       />
-      <Card
-        type="innerTextFullImage"
-        likeIcon={likeIcon}
-        title="가은"
-        description="gkgk"
-        imageUrl={imgUrl}
-        redirectUrl="/"
-      />
+      <Card type="innerTextFullImage" title="가은" description="gkgk" imageUrl={imgUrl} redirectUrl="/" />
     </>
   );
 }
