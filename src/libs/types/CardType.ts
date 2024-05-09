@@ -5,7 +5,7 @@ type CardProps = {
   likeIcon: StaticImageData;
   title: string;
   description: string;
-  imageUrl: string;
+  imageUrl: StaticImageData;
   redirectUrl: string;
   isTextHide?: boolean;
   className?: string;

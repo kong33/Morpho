@@ -1,8 +1,11 @@
+import classNames from 'classnames/bind';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from '@/components/Card/index.module.scss';
 import CardProps from '@/libs/types/CardType';
+
+const cn = classNames.bind(styles);
 
 export default function Card({
   type,
@@ -14,20 +17,20 @@ export default function Card({
   isTextHide = false,
   className = ''
 }: CardProps) {
+  const cardWrapper = cn(type, className, 'cardWrapper');
+  const textWrapper = cn(isTextHide ? 'hide' : 'show', 'textWrapper');
+  const likeWrapper = cn('likeWrapper');
+
   return (
     <Link href={redirectUrl}>
-      <article className={`${styles[type]} ${styles[className]}`}>
-        <div>
-          <Image
-            src={likeIcon}
-            width="10"
-            height="10"
-            alt="like
-              "
-          />
+      <article className={cardWrapper}>
+        <div className={likeWrapper}>
+          <Image src={likeIcon} width="20" height="20" alt="like" />
         </div>
-        <Image src={imageUrl} fill alt={title} loading="lazy" />
-        <div className={isTextHide ? styles.hide : styles.show}>
+
+        <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" />
+
+        <div className={textWrapper}>
           <h1>{title}</h1>
           <p>{description}</p>
         </div>
