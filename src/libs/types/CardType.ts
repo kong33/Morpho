@@ -8,6 +8,7 @@ type CardProps = {
   isHoverAble?: boolean;
   redirectUrl?: string;
   className?: string;
+  isIcon?: boolean;
 };
 
 export default CardProps;

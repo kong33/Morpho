@@ -1,9 +1,12 @@
+import styles from '@/components/Footer/index.module.scss';
+
 export default function Footer() {
   return (
-    <footer>
-      <a href="https://www.flaticon.com/kr/free-icons/-" title="페이스 북 좋아요 아이콘">
-        페이스 북 좋아요 아이콘 제작자: Ranah Pixel Studio - Flaticon
-      </a>
+    <footer className={styles.footerContainer}>
+      <div className={styles.textWrapper}>
+        <p>phone: 010-4288-0941</p>
+        <p> @Copy Right</p>
+      </div>
     </footer>
   );
 }

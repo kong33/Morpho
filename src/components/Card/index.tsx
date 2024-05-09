@@ -9,17 +9,26 @@ import LikeButton from '../LikeButton';
 
 const cn = classNames.bind(styles);
 
-export default function Card({ type, title, description, imageUrl, redirectUrl, isHoverAble, className }: CardProps) {
-  const cardWrapper = cn(type, className, 'cardWrapper', isHoverAble ? 'cardHover' : '');
+export default function Card({
+  type,
+  title,
+  description,
+  imageUrl,
+  redirectUrl,
+  isHoverAble,
+  className,
+  isIcon = false
+}: CardProps) {
+  const cardWrapper = cn(type, 'cardWrapper', isHoverAble ? 'cardHover' : '', className);
   const textWrapper = cn('textWrapper');
   const imageWrapper = cn(type === 'outerTextFullImage' ? 'notFull' : 'full', isHoverAble ? 'hoverAble' : '');
 
   if (!redirectUrl) {
     return (
       <article className={cardWrapper}>
-        <LikeButton />
+        {isIcon && <LikeButton />}
         <div className={imageWrapper}>
-          <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" />
+          <Image src={imageUrl} fill objectFit="contain" alt={title} loading="lazy" placeholder="blur" />
         </div>
         <div className={textWrapper}>
           <h1>{title}</h1>
@@ -31,9 +40,9 @@ export default function Card({ type, title, description, imageUrl, redirectUrl, 
   return (
     <article className={cardWrapper}>
       <Link href={redirectUrl}>
-        <LikeButton />
+        {isIcon && <LikeButton />}
         <div className={imageWrapper}>
-          <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" />
+          <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" objectFit="contain" />
         </div>
 
         <div className={textWrapper}>
