@@ -1,0 +1,17 @@
+@import '@/styles/global.scss';
+
+.buttonStyle {
+  position: absolute;
+  right: 0rem;
+  padding-left: 1rem;
+  z-index: $zindex-popover;
+  width: 4rem;
+  height: 4rem;
+}
+
+.clicked {
+  opacity: 1;
+}
+.unClicked {
+  opacity: 0.5;
+}

@@ -5,11 +5,12 @@ import Link from 'next/link';
 import styles from '@/components/Card/index.module.scss';
 import CardProps from '@/libs/types/CardType';
 
+import LikeButton from '../LikeButton';
+
 const cn = classNames.bind(styles);
 
 export default function Card({
   type,
-  likeIcon,
   title,
   description,
   imageUrl,
@@ -19,14 +20,25 @@ export default function Card({
 }: CardProps) {
   const cardWrapper = cn(type, className, 'cardWrapper');
   const textWrapper = cn(isTextHide ? 'hide' : 'show', 'textWrapper');
-  const likeWrapper = cn('likeWrapper');
 
+  if (!redirectUrl) {
+    return (
+      <article className={cardWrapper}>
+        <LikeButton />
+
+        <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" />
+
+        <div className={textWrapper}>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </div>
+      </article>
+    );
+  }
   return (
     <Link href={redirectUrl}>
       <article className={cardWrapper}>
-        <div className={likeWrapper}>
-          <Image src={likeIcon} width="20" height="20" alt="like" />
-        </div>
+        <LikeButton />
 
         <Image src={imageUrl} fill alt={title} loading="lazy" placeholder="blur" />
 
