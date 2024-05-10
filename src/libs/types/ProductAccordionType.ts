@@ -11,4 +11,8 @@ export type AccordionProps = {
   className?: string;
 };
 
-export type productDataType = { title: string; description: string }[];
+export type productDataType = {
+  title: string;
+  description: string;
+  imageUrl: StaticImageData;
+}[];
