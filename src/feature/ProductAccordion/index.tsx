@@ -3,7 +3,6 @@ import { useState } from 'react';
 import styles from '@/feature/ProductAccordion/index.module.scss';
 import { productAccordionBackgroundColor } from '@/libs/constants';
 import { productDataType } from '@/libs/types/ProductAccordionType';
-import good from '@/public/images/homeHero.jpg';
 
 import Accordion from './Accordion';
 
@@ -22,7 +21,7 @@ export default function ProductAccordion({ productData }: { productData: product
         <Accordion
           key={item.title}
           title={item.title}
-          imageUrl={good}
+          imageUrl={item.imageUrl}
           description={item.description}
           onClick={() => handleClick(index)} // 이벤트 발생했을 떄만 실행
           isClicked={clickedStatusList[index]}

@@ -27,7 +27,7 @@
       //"@/contexts/*": ["./src/libs/contexts/*"],
       "@/constants/*": ["./src/libs/constants/*"],
       "@/types/*": ["./src/libs/types/*"],
-      "@/pages/*": ["./pages/*"],
+      "@/pages/*": ["./src/pages/*"],
       "@/public/*": ["./public/*"]
     },
     "incremental": true

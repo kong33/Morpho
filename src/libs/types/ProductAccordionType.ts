@@ -8,7 +8,11 @@ export type AccordionProps = {
   onClick: MouseEventHandler<HTMLDivElement>;
   isClicked: boolean;
   backgroundColor: string;
-  className: string;
+  className?: string;
 };
 
-export type productDataType = { title: string; description: string }[];
+export type productDataType = {
+  title: string;
+  description: string;
+  imageUrl: StaticImageData;
+}[];
