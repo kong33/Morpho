@@ -6,11 +6,12 @@ export const CATEGORY_MENU = [
       'Aluminum box | 알루미늄 박스',
       'Manufacturing & Anodizing | 제조, 처리',
       'Paint & Marking | 도색, 마킹'
-    ]
+    ],
+    path: 'product'
   },
-  { name: '참고 디자인', subMenus: ['Inspiration | 참고 디자인'] },
-  { name: '가격 & 서비스', subMenus: ['Price | 가격', 'Shipping | 배송'] },
-  { name: '문의하기', subMenus: ['Q&A', 'How to connect us | 문의'] }
+  { name: '참고 디자인', subMenus: ['Inspiration | 참고 디자인'], path: 'inspiration' },
+  { name: '가격 & 서비스', subMenus: ['Price | 가격', 'Shipping | 배송'], path: 'price&shipping' },
+  { name: '문의하기', subMenus: ['Q&A', 'How to connect us | 문의'], path: 'Q&A' }
 ];
 
 export const productData = [

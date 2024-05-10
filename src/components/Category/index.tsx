@@ -16,7 +16,7 @@ export default function Category({ categoryMenu }: { categoryMenu: categoryItemT
             onMouseEnter={() => mouseEvent(idx, true)}
             onMouseLeave={() => mouseEvent(idx, false)}
           >
-            <Link href={`/${menu.name.toLowerCase()}`}>{menu.name}</Link>
+            <Link href={`/${menu.path}`}>{menu.name}</Link>
           </li>
         ))}
       </ul>

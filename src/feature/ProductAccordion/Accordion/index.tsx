@@ -11,9 +11,10 @@ export default function Accordion({
   onClick,
   isClicked,
   backgroundColor,
-  className
+  className = ''
 }: AccordionProps) {
   const wideStyle = isClicked ? 'wide' : '';
+  const wideImageStyle = isClicked ? 'wideImage' : '';
 
   return (
     <div
