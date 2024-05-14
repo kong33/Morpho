@@ -10,6 +10,10 @@ $cardTextWrapperHeight: 6rem;
   height: $cardHeight;
   position: relative;
 
+  .imageWrapper {
+    position: relative;
+    background-color: black;
+  }
   .textWrapper {
     z-index: $zindex-dropdown;
     position: absolute;
@@ -54,21 +58,24 @@ $cardTextWrapperHeight: 6rem;
 .cardHover {
   padding: 0;
 
-  img {
+  .imageWrapper {
     border-radius: 1rem;
     z-index: $zindex-dropdown;
   }
   &:hover {
     z-index: $zindex-image-cover;
-    img {
+    .imageWrapper {
       z-index: $zindex-image-cover;
+      img {
+        z-index: $zindex-image-cover;
+      }
     }
   }
   .textWrapper {
     z-index: $zindex-image-cover;
     width: $cardWidth;
     height: $cardHeight;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     position: absolute;
     top: 0;

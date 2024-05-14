@@ -26,6 +26,7 @@ export default function ProductAccordion({ productData }: { productData: product
           onClick={() => handleClick(index)} // 이벤트 발생했을 떄만 실행
           isClicked={clickedStatusList[index]}
           backgroundColor={productAccordionBackgroundColor[index]}
+          className=""
         />
       ))}
     </div>
