@@ -17,7 +17,7 @@ export default function Inspiration() {
   const { images: paintAndMarkingImages } = useGetProductImages(PRODUCT_IMAGE[3]);
 
   imagesList = [wallPanelImages, aluminumBoxImages, manufacturingImages, paintAndMarkingImages].flat();
-  console.log(imagesList);
+
   return (
     <>
       <SearchBar
