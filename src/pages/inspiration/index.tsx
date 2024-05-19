@@ -1,44 +1,16 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode } from 'react';
 
 import Card from '@/components/Card';
 import SearchBar from '@/components/SearchBar';
 import MainLayout from '@/layouts/MainLayout';
 import { WALLPANEL_DATA } from '@/libs/constants/ProductData/WallPanelData';
+import useGetProductImages from '@/libs/hooks/useGetProductImages';
 import styles from '@/pages/inspiration/index.module.scss';
 import SearchBarIcon from '@/public/svg/SearchBarIcon';
 import CloseButton from '@/public/svg/closeButton';
 
-interface ImageObject {
-  imageUrl: string;
-}
-
 export default function Inspiration() {
-  const [images, setImages] = useState<ImageObject[]>([]);
-  const productList = ['wallPanel', 'aluminumBox', 'manufacturing', 'paintAndMarking'];
-
-  useEffect(() => {
-    let isCancelled = false;
-
-    // 이미지 데이터 로드 함수 정의
-    const loadImages = async () => {
-      try {
-        const promises = productList.map((product) => fetch(`/api/images/${product}`).then((res) => res.json()));
-        const imagesLists = await Promise.all(promises);
-        const imageObjects = imagesLists.flat().map((url) => ({ imageUrl: url }));
-        if (!isCancelled) {
-          setImages(imageObjects);
-        }
-      } catch (error) {
-        console.error('Failed to load images', error);
-      }
-    };
-
-    loadImages();
-
-    return () => {
-      isCancelled = true;
-    };
-  }, []);
+  const { images: productImages } = useGetProductImages();
 
   return (
     <>
@@ -48,13 +20,13 @@ export default function Inspiration() {
         ResetButton={<CloseButton width={20} height={20} />}
       />
       <div className={styles.cardsWrapper}>
-        {WALLPANEL_DATA.map((item, index) => (
+        {productImages.map((images, index) => (
           <Card
-            key={item.title}
+            key={WALLPANEL_DATA[index].title}
             type="innerTextFullImage"
-            title={item.title}
-            description={item.description}
-            imageUrl={images[index]?.imageUrl}
+            title={WALLPANEL_DATA[index].title}
+            description={WALLPANEL_DATA[index].description}
+            imageUrl={images?.imageUrl}
             isHoverAble
           />
         ))}
