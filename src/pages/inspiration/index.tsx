@@ -22,10 +22,10 @@ export default function Inspiration() {
       <div className={styles.cardsWrapper}>
         {productImages.map((images, index) => (
           <Card
-            key={WALLPANEL_DATA[index].title}
+            key={WALLPANEL_DATA[index]?.title ? WALLPANEL_DATA[index].title : 'a'}
             type="innerTextFullImage"
-            title={WALLPANEL_DATA[index].title}
-            description={WALLPANEL_DATA[index].description}
+            title={WALLPANEL_DATA[index]?.title ? WALLPANEL_DATA[index].title : 'a'}
+            description={WALLPANEL_DATA[index]?.description ? WALLPANEL_DATA[index].description : 'b'}
             imageUrl={images?.imageUrl}
             isHoverAble
           />
