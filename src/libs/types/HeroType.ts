@@ -4,7 +4,8 @@ export type HeroProps = {
   type: 'fullImage' | 'halfImage';
   imageUrl?: StaticImageData;
   title?: string;
-  description?: string;
+  subTitle?: string[];
+  description?: string[];
   className?: string;
 };
 
