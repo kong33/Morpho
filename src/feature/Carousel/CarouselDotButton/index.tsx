@@ -11,6 +11,7 @@ type UseDotButtonType = {
 export const useDotButton = (emblaApi: EmblaCarouselType | undefined): UseDotButtonType => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  console.log('a');
 
   const onDotButtonClick = useCallback(
     (index: number) => {

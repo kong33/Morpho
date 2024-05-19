@@ -15,7 +15,7 @@ type PropType = {
 };
 
 const EmblaCarousel = (props: PropType) => {
-  console.log('a');
+  console.log('b');
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay({ playOnInit: true, delay: 4000 })]);
   console.log(slides);
