@@ -11,7 +11,7 @@ import banner4 from '@/public/images/homeBanner/banner4.jpg';
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDES = [banner1, banner2, banner3, banner4];
-
+console.log('a');
 export default function HomeContent() {
   return (
     <>
