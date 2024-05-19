@@ -12,7 +12,7 @@ const cn = classNames.bind(styles);
 export default function Card({
   type,
   title,
-  description,
+  descriptions,
   imageUrl,
   redirectUrl,
   isHoverAble,
@@ -35,7 +35,9 @@ export default function Card({
       </div>
       <div className={textWrapper}>
         <h1>{title}</h1>
-        <p>{description}</p>
+        {descriptions.map((description) => (
+          <p>{description}</p>
+        ))}
       </div>
       {redirectUrl && (
         <Link href={redirectUrl}>
