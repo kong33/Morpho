@@ -3,15 +3,21 @@ import { ReactNode } from 'react';
 import Card from '@/components/Card';
 import SearchBar from '@/components/SearchBar';
 import MainLayout from '@/layouts/MainLayout';
-import { WALLPANEL_DATA } from '@/libs/constants/ProductData/WallPanelData';
+import { PRODUCT_IMAGE } from '@/libs/constants/inspirationpage';
 import useGetProductImages from '@/libs/hooks/useGetProductImages';
 import styles from '@/pages/inspiration/index.module.scss';
 import SearchBarIcon from '@/public/svg/SearchBarIcon';
 import CloseButton from '@/public/svg/closeButton';
 
 export default function Inspiration() {
-  const { images: productImages } = useGetProductImages();
+  let imagesList = [];
+  const { images: wallPanelImages } = useGetProductImages(PRODUCT_IMAGE[0]);
+  const { images: aluminumBoxImages } = useGetProductImages(PRODUCT_IMAGE[1]);
+  const { images: manufacturingImages } = useGetProductImages(PRODUCT_IMAGE[2]);
+  const { images: paintAndMarkingImages } = useGetProductImages(PRODUCT_IMAGE[3]);
 
+  imagesList = [wallPanelImages, aluminumBoxImages, manufacturingImages, paintAndMarkingImages].flat();
+  console.log(imagesList);
   return (
     <>
       <SearchBar
@@ -20,12 +26,12 @@ export default function Inspiration() {
         ResetButton={<CloseButton width={20} height={20} />}
       />
       <div className={styles.cardsWrapper}>
-        {productImages.map((images, index) => (
+        {imagesList.map((images) => (
           <Card
-            key={WALLPANEL_DATA[index]?.title ? WALLPANEL_DATA[index].title : 'a'}
+            key={`${images?.title} ${images?.size} ${images.thickNess}`}
             type="innerTextFullImage"
-            title={WALLPANEL_DATA[index]?.title ? WALLPANEL_DATA[index].title : 'a'}
-            description={WALLPANEL_DATA[index]?.description ? WALLPANEL_DATA[index].description : 'b'}
+            title={images?.title}
+            descriptions={[images?.size || '', images?.thickNess || '']}
             imageUrl={images?.imageUrl}
             isHoverAble
           />
