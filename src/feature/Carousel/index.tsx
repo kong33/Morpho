@@ -1,63 +1,65 @@
-/* eslint-disable */
-import React from 'react';
-import { EmblaOptionsType } from 'embla-carousel';
-import { DotButton, useDotButton } from '@/feature/Carousel/CarouselDotButton/index';
-import { PrevButton, NextButton, usePrevNextButtons } from '@/feature/Carousel/CarouselArrowButton/index';
-import useEmblaCarousel from 'embla-carousel-react';
-import { StaticImageData } from 'next/image';
-import Image from 'next/image';
-import styles from './index.module.scss';
-import Autoplay from 'embla-carousel-autoplay';
+// // import React, { ReactElement } from 'react';
+// // import useEmblaCarousel from 'embla-carousel-react/components/useEmblaCarousel';
+// // import styles from '@/feature/Carousel/index.module.scss';
+// // export default function Carousel({ carouselItem }: { carouselItem: ReactElement[] }) {
+// //   const [emblaRef] = useEmblaCarousel();
 
-type PropType = {
-  slides: StaticImageData[];
-  options?: EmblaOptionsType;
-};
+// //   return (
+// //     <div className={styles.embla} ref={emblaRef}>
+// //       {carouselItem.map((item) => (
+// //         <div className={styles.embla__slide}>{item}</div>
+// //       ))}
+// //     </div>
+// //   );
+// // }
+// import React from 'react';
+// import { EmblaOptionsType } from 'embla-carousel';
+// import { DotButton, useDotButton } from '@/feature/Carousel/CarouselDotButton/index';
+// import useEmblaCarousel from 'embla-carousel-react';
 
-const EmblaCarousel = (props: PropType) => {
-  const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay({ playOnInit: true, delay: 4000 })]);
-  console.log(slides);
-  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
+// type PropType = {
+//   slides: number[];
+//   options?: EmblaOptionsType;
+// };
 
-  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
+// const EmblaCarousel: React.FC<PropType> = (props) => {
+//   const { slides, options } = props;
+//   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
-  return (
-    <section className={styles.embla}>
-      <div className={styles.embla__viewport} ref={emblaRef}>
-        <div className={styles.embla__container}>
-          {slides.map((item, index) => (
-            <div className={styles.embla__slide} key={index}>
-              <Image
-                src={item.src}
-                width={1000}
-                height={370}
-                alt="heroImage"
-                placeholder="blur"
-                blurDataURL={item.blurDataURL}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+//   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
 
-      <div className={styles.embla__controls_arrow}>
-        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-      </div>
-      <div className={styles.embla__controls_dots}>
-        <div className={styles.embla__dots}>
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={`${styles.embla__dot} ${index === selectedIndex ? styles['embla__dot--selected'] : ''}`}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+//   // const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
 
-export default EmblaCarousel;
+//   return (
+//     <section className="embla">
+//       <div className="embla__viewport" ref={emblaRef}>
+//         <div className="embla__container">
+//           {slides.map((index) => (
+//             <div className="embla__slide" key={index}>
+//               <div className="embla__slide__number">{index + 1}</div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+
+//       <div className="embla__controls">
+//         {/* <div className="embla__buttons">
+//           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+//           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+//         </div> */}
+
+//         <div className="embla__dots">
+//           {scrollSnaps.map((_, index) => (
+//             <DotButton
+//               key={index}
+//               onClick={() => onDotButtonClick(index)}
+//               className={'embla__dot'.concat(index === selectedIndex ? ' embla__dot--selected' : '')}
+//             />
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default EmblaCarousel;

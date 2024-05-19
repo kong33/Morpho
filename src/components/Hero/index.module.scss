@@ -1,12 +1,8 @@
 @import '@/styles/global.scss';
 // 추후 조정
 .halfImage {
-  padding: 0;
   .imageWrapper {
-    position: relative;
-    object-fit: contain;
-    width: 50vw;
-    height: 100%;
+    margin-left: 10rem;
   }
 }
 
@@ -23,36 +19,18 @@
   .textWrapper {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    width: 100%;
-    padding-top: 4rem;
-    z-index: $zindex-modal-backdrop;
+    gap: 1rem;
+    width: 50%;
+    padding-top: 8rem;
 
     h1 {
       @include pretendard-60-900;
       display: inline-block;
     }
 
-    h2 {
-      @include pretendard-24-600;
-      display: inline-block;
-      line-height: 4rem;
-    }
-
     p {
       @include pretendard-20-100;
       display: inline-block;
-    }
-
-    .subTitle {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 1rem;
-    }
-
-    .description {
-      display: flex;
-      flex-direction: column;
     }
   }
 }

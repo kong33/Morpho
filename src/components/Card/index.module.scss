@@ -57,14 +57,24 @@ $cardTextWrapperHeight: 6rem;
 
 .cardHover {
   padding: 0;
+  width: $cardWidth;
+  height: $cardHeight;
+  position: relative;
+  z-index: $zindex-dropdown;
 
-  .imageWrapper {
+  .hoverAble {
     border-radius: 1rem;
-    z-index: $zindex-dropdown;
+    z-index: $zindex-sticky;
+    position: relative;
+    width: $cardWidth;
+    height: $cardHeight;
+    background-color: $color-primary1;
+    box-shadow: 2rem 2rem 0.5 $color-black;
   }
   &:hover {
     z-index: $zindex-image-cover;
-    .imageWrapper {
+    transition: z-index ease-in-out 3s;
+    .hoverAble {
       z-index: $zindex-image-cover;
       img {
         z-index: $zindex-image-cover;
@@ -75,12 +85,18 @@ $cardTextWrapperHeight: 6rem;
     z-index: $zindex-image-cover;
     width: $cardWidth;
     height: $cardHeight;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(20, 108, 148, 0.7);
     border-radius: 1rem;
     position: absolute;
     top: 0;
     margin: 0;
     padding: 4rem;
+    p {
+      z-index: $zindex-image-cover;
+    }
+    h1 {
+      z-index: $zindex-image-cover;
+    }
   }
 }
 
