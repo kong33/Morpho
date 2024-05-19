@@ -35,9 +35,7 @@ export default function Card({
       </div>
       <div className={textWrapper}>
         <h1>{title}</h1>
-        {descriptions.map((description) => (
-          <p>{description}</p>
-        ))}
+        {descriptions?.map((description) => <p>{description}</p>)}
       </div>
       {redirectUrl && (
         <Link href={redirectUrl}>
