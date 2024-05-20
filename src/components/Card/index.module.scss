@@ -9,20 +9,19 @@ $cardTextWrapperHeight: 6rem;
   width: $cardWidth;
   height: $cardHeight;
   position: relative;
+  padding: 2rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
 
   .imageWrapper {
     position: relative;
-    background-color: black;
   }
   .textWrapper {
     z-index: $zindex-dropdown;
-    position: absolute;
-    bottom: 1rem;
     color: $color-white;
     margin: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 
     flex-wrap: wrap;
     h1 {
@@ -107,21 +106,40 @@ $cardTextWrapperHeight: 6rem;
 }
 
 $cardWidthHomePage: 23vw;
-$cardHeightHomePage: 60vh;
+$cardHeightHomePage: 30vw;
+
 .wallPanel {
   width: $cardWidthHomePage;
   height: $cardHeightHomePage;
   background-color: $color-primary1;
   border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+
+  .imageWrapper {
+    width: 20vw;
+    height: 18vw;
+  }
   .textWrapper {
     color: $color-black;
+    gap: 2rem;
 
-    @include desktop {
+    @include wide-desktop {
       h1 {
-        @include pretendard-40-700;
+        @include pretendard-70-700;
       }
       p {
-        @include pretendard-20-100;
+        @include pretendard-24-100;
+      }
+    }
+    @include desktop {
+      h1 {
+        @include pretendard-24-600;
+      }
+      p {
+        @include pretendard-14-200;
+        line-height: 2rem;
       }
     }
   }

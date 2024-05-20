@@ -1,5 +1,18 @@
+@import '@/styles/global.scss';
 .cardWrapper {
   margin-top: 8rem;
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 15vw;
+}
+.halfBackground {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-category-hover;
+  padding-top: 10vh;
+}
+.middleBanner {
+  display: flex;
+  justify-content: center;
+  background-color: #f2db68;
 }
