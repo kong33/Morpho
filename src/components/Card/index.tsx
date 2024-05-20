@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import Image from 'next/image';
 import Link from 'next/link';
+import { LegacyRef } from 'react';
 
 import styles from '@/components/Card/index.module.scss';
 import useIntersectionObserver from '@/libs/hooks/useIntersectionObserver';
@@ -32,14 +33,14 @@ export default function Card({
   );
 
   return (
-    <article className={cardWrapper} ref={ref}>
+    <article className={cardWrapper} ref={ref as unknown as LegacyRef<HTMLElement>}>
       {isIcon && <LikeButton />}
       <div className={imageWrapper}>
         {isVisible && <Image src={imageUrl} fill objectFit="contain" alt={title} loading="lazy" quality={0} />}
       </div>
       <div className={textWrapper}>
         <h1>{title}</h1>
-        {descriptions?.map((description) => <p>{description}</p>)}
+        <div>{descriptions?.map((description) => <p>{description}</p>)}</div>
       </div>
       {redirectUrl && (
         <Link href={redirectUrl}>
