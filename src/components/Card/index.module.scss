@@ -108,11 +108,17 @@ $cardTextWrapperHeight: 6rem;
 
 $cardWidthHomePage: 23vw;
 $cardHeightHomePage: 60vh;
+
 .wallPanel {
   width: $cardWidthHomePage;
   height: $cardHeightHomePage;
   background-color: $color-primary1;
   border-radius: 3rem;
+
+  .imageWrapper {
+    width: 15vw;
+    height: 14vw;
+  }
   .textWrapper {
     color: $color-black;
 

@@ -25,7 +25,11 @@ export default function Card({
 
   const cardWrapper = cn(type, 'cardWrapper', isHoverAble ? 'cardHover' : '', className);
   const textWrapper = cn('textWrapper');
-  const imageWrapper = cn(type === 'outerTextFullImage' ? 'notFull' : 'full', isHoverAble ? 'hoverAble' : '');
+  const imageWrapper = cn(
+    type === 'outerTextFullImage' ? 'notFull' : 'full',
+    isHoverAble ? 'hoverAble' : '',
+    'imageWrapper'
+  );
 
   return (
     <article className={cardWrapper} ref={ref}>
