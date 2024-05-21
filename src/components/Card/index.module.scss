@@ -22,6 +22,7 @@ $cardTextWrapperHeight: 6rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    border-radius: 1rem;
 
     flex-wrap: wrap;
     h1 {
@@ -149,17 +150,34 @@ $cardHeightHomePage: 30vw;
   width: $cardWidthHomePage;
   height: $cardHeightHomePage;
   background-color: $color-primary2;
-
   border-radius: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+
+  .imageWrapper {
+    width: 20vw;
+    height: 18vw;
+  }
   .textWrapper {
     color: $color-black;
 
-    @include desktop {
+    @include wide-desktop {
       h1 {
-        @include pretendard-40-700;
+        @include pretendard-70-700;
       }
       p {
-        @include pretendard-20-100;
+        @include pretendard-24-100;
+      }
+    }
+    @include desktop {
+      h1 {
+        @include pretendard-24-600;
+      }
+      p {
+        @include pretendard-14-200;
+        line-height: 2rem;
       }
     }
   }
@@ -169,17 +187,32 @@ $cardHeightHomePage: 30vw;
   height: $cardHeightHomePage;
   background-color: $color-primary3;
   border-radius: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  .imageWrapper {
+    width: 20vw;
+    height: 18vw;
+  }
   .textWrapper {
     color: $color-black;
-    top: 0;
 
-    @include desktop {
-      justify-content: space-between;
+    @include wide-desktop {
       h1 {
-        @include pretendard-40-700;
+        @include pretendard-70-700;
       }
       p {
-        @include pretendard-20-100;
+        @include pretendard-24-100;
+      }
+    }
+    @include desktop {
+      h1 {
+        @include pretendard-24-600;
+      }
+      p {
+        @include pretendard-14-200;
+        line-height: 2rem;
       }
     }
   }
@@ -190,15 +223,32 @@ $cardHeightHomePage: 30vw;
   height: $cardHeightHomePage;
   background-color: $color-primary4;
   border-radius: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  .imageWrapper {
+    width: 20vw;
+    height: 18vw;
+  }
   .textWrapper {
     color: $color-black;
 
-    @include desktop {
+    @include wide-desktop {
       h1 {
-        @include pretendard-40-700;
+        @include pretendard-70-700;
       }
       p {
-        @include pretendard-20-100;
+        @include pretendard-24-100;
+      }
+    }
+    @include desktop {
+      h1 {
+        @include pretendard-24-600;
+      }
+      p {
+        @include pretendard-14-200;
+        line-height: 2rem;
       }
     }
   }

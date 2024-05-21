@@ -9,7 +9,7 @@ import banner1 from '@/public/images/homeBanner/banner1.jpg';
 import banner2 from '@/public/images/homeBanner/banner2.jpg';
 import banner3 from '@/public/images/homeBanner/banner3.jpg';
 import banner4 from '@/public/images/homeBanner/banner4.jpg';
-import middleBanner from '@/public/images/homeMiddleBanner.jpg';
+import middleBanner from '@/public/images/homeLowerBanner/homeMiddleBanner.jpg';
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDES = [banner1, banner2, banner3, banner4];
