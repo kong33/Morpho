@@ -5,6 +5,7 @@ $imageHeight: 30vh;
 
 $imageWideWidth: 30vw;
 $imageWideHeight: 35vh;
+
 .accordionWrapper {
   transition:
     flex-grow 0.5s ease,
@@ -13,9 +14,9 @@ $imageWideHeight: 35vh;
   flex-direction: column;
   padding: 2rem;
   gap: 2rem;
-  h1 {
-    @include pretendard-30-900;
-  }
+  padding: 10rem;
+  color: $color-black;
+  cursor: pointer;
 }
 
 .wide {
@@ -57,7 +58,14 @@ $imageWideHeight: 35vh;
   @include responsive-wide;
 }
 @include mobile {
-  @include responsive-wide;
-}
+  .accordionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-//클릭시 모션 움직임 해결하기
+    .imageWrapper {
+      width: 90vw;
+    }
+    @include responsive-wide;
+  }
+}

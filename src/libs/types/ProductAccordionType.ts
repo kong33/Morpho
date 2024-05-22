@@ -9,10 +9,12 @@ export type AccordionProps = {
   isClicked: boolean;
   backgroundColor: string;
   className?: string;
+  redirectUrl?: string;
 };
 
 export type productDataType = {
   title: string;
   description: string;
   imageUrl: StaticImageData;
+  redirectUrl: string;
 }[];
