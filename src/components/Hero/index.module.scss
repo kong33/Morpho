@@ -90,6 +90,21 @@
   .textWrapper {
     margin-top: 10rem;
 
+    @include mobile {
+      .imageWrapper {
+        height: 30vh;
+      }
+
+      h1 {
+        @include pretendard-10vw-800;
+      }
+      h2 {
+        @include pretendard-6vw-200;
+      }
+      p {
+        @include pretendard-3-6vw-100;
+      }
+    }
     @include wide-desktop {
       h1 {
         @include pretendard-60-900;
@@ -129,9 +144,33 @@
 
 .wallPanelDetail {
   background-color: $color-primary1;
+
   .imageWrapper {
     width: 100%;
     height: 150%;
     margin-top: 4rem;
+  }
+}
+
+@include mobile {
+  .wallPanelDetail {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    padding-top: 5rem;
+    gap: 0;
+
+    .imageWrapper {
+      width: 80vw;
+      height: auto;
+    }
+    .textWrapper {
+      h1 {
+        @include pretendard-10vw-800;
+      }
+      h2 {
+        @include pretendard-4vw-200;
+      }
+    }
   }
 }

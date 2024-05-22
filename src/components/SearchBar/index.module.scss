@@ -34,3 +34,11 @@
     color: $color-category-hover;
   }
 }
+
+.mobile {
+  .inputSection {
+    height: 5vh;
+    border-radius: 5vw;
+    @include pretendard-3-6vw-100;
+  }
+}

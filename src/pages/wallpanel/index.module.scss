@@ -5,9 +5,10 @@
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   row-gap: 7rem;
+
   @include mobile {
     padding: 1rem;
-
+    margin-top: 4rem;
     grid-template-columns: repeat(1, 1fr);
   }
 }

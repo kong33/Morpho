@@ -19,7 +19,7 @@
   }
 
   .categoryMenuWrapper {
-    height: 5rem;
+    //height: 5rem;
     display: flex;
     margin: auto;
     margin-bottom: 1.5vh;
@@ -35,7 +35,6 @@
       width: 25vw;
       height: 100%;
       list-style-type: none;
-      @include pretendard-20-600;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -70,4 +69,23 @@
 .categoryContainer .detailMenu ul li:hover {
   cursor: pointer;
   background-color: $color-category-hover;
+}
+
+@include mobile {
+  .categoryContainer {
+    margin-top: 1vw;
+    height: 8vh;
+  }
+  .categoryMenuWrapper {
+    height: 8vh;
+    li {
+      @include pretendard-4vw-800;
+    }
+  }
+  .categoryContainer .detailMenu {
+    margin-bottom: 5vh;
+  }
+  .categoryContainer .detailMenu ul li {
+    @include pretendard-3-6vw-200;
+  }
 }

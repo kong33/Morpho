@@ -2,13 +2,31 @@
 
 .heroCover {
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 70vh;
   z-index: $zindex-fixed;
   top: -70vh;
   background: linear-gradient(90deg, $color-white, rgba(0, 0, 0, 0));
+
+  @include mobile {
+    height: 30vh;
+    width: 80vw;
+  }
 }
 
 .HeroWrapper {
   height: 70vh;
+  @include mobile {
+    height: 30vh;
+  }
+}
+
+@include mobile {
+  .heroCover {
+    height: 30vh;
+    width: 80vw;
+  }
+  .HeroWrapper {
+    height: 30vh;
+  }
 }

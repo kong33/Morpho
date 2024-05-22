@@ -10,8 +10,19 @@
     flex-direction: column;
     gap: 2rem;
     padding: 4rem;
+  }
+}
+
+@include mobile {
+  .footerContainer {
+    height: 10vh;
+    margin-top: 0;
+  }
+
+  .textWrapper {
+    height: 10vh;
     p {
-      @include pretendard-16-100;
+      @include pretendard-30-700;
     }
   }
 }

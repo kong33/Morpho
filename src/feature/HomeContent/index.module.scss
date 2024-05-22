@@ -16,3 +16,17 @@
   justify-content: center;
   background-color: #f2db68;
 }
+
+@include mobile {
+  .cardWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .halfBackground {
+    height: 30vh;
+  }
+}

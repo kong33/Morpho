@@ -7,15 +7,17 @@ export default function SearchBar({
   Icon,
   ResetButton,
   placeHolder,
+  className,
   ...rest
 }: {
   Icon: ReactElement;
   ResetButton: ReactElement;
   placeHolder: string;
+  className?: string;
 }) {
   const { handleSearchValueChange, handleResetButtonClick, searchValue } = useSearchKeyword();
   return (
-    <div className={styles.searchBarWrapper}>
+    <div className={`${styles.searchBarWrapper} ${className && styles[className]}`}>
       <div className={styles.searchBarIcon}>{Icon}</div>
       <input
         placeholder={placeHolder}

@@ -21,9 +21,10 @@ export default function Inspiration() {
   return (
     <>
       <SearchBar
-        placeHolder="키워드로 검색해보세요 ex) 콘센트, 알루미늄..."
+        placeHolder="검색 기능은 추후 추가될 예정입니다."
         Icon={<SearchBarIcon width={20} height={20} />}
         ResetButton={<CloseButton width={20} height={20} />}
+        className="mobile"
       />
       <div className={styles.cardsWrapper}>
         {imagesList.map((images) => (
@@ -34,6 +35,7 @@ export default function Inspiration() {
             descriptions={[images?.size || '', images?.thickNess || '']}
             imageUrl={images?.imageUrl}
             isHoverAble
+            className="inspiration"
           />
         ))}
       </div>

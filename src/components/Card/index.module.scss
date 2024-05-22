@@ -43,13 +43,18 @@ $cardTextWrapperHeight: 6rem;
   @include mobile {
     width: 90vw;
     height: 30vh;
-
+    border-radius: 5vw;
     .imageWrapper {
       width: 100%;
     }
     .textWrapper {
+      padding: 5vw;
+      border-radius: 5vw;
       h1 {
-        @include pretendard-10vw-600;
+        @include pretendard-6vw-600;
+      }
+      p {
+        @include pretendard-4vw-200;
       }
     }
   }
@@ -62,22 +67,10 @@ $cardTextWrapperHeight: 6rem;
     top: 0;
     height: 30%;
     width: 100%;
-    background-color: $color-primary1;
-    padding: 1rem;
-    color: $color-black;
-    border-radius: 0 0 1rem 1rem;
+    color: $color-gray;
 
     display: flex;
     justify-content: space-between;
-
-    h1 {
-      @include pretendard-20-600;
-    }
-
-    p {
-      @include pretendard-10-100;
-      line-height: 1.4rem;
-    }
   }
 }
 
@@ -94,7 +87,7 @@ $cardTextWrapperHeight: 6rem;
     position: relative;
     width: $cardWidth;
     height: $cardHeight;
-    background-color: $color-primary1;
+    background-color: $color-white;
     box-shadow: 2rem 2rem 0.5 $color-black;
   }
   &:hover {
@@ -275,6 +268,78 @@ $cardHeightHomePage: 30vw;
       p {
         @include pretendard-14-200;
         line-height: 2rem;
+      }
+    }
+  }
+}
+
+.paintMarking,
+.aluminumBox,
+.wallPanel,
+.manuFacturingAnodizing {
+  @include mobile {
+    width: 90vw;
+    height: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+
+    .imageWrapper {
+      width: 50vw;
+      height: 50vw;
+    }
+    .textWrapper {
+      width: 100%;
+      padding: 4rem;
+      color: $color-black;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      h1 {
+        @include pretendard-10vw-800;
+      }
+      p {
+        @include pretendard-4vw-200;
+        line-height: 6vw;
+      }
+    }
+  }
+
+  .redirectButton {
+    width: 20vw;
+    height: 3vh;
+    border-radius: 3rem;
+    background-color: rgba(255, 255, 255, 0.6);
+
+    color: $color-primary4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include pretendard-26-100;
+  }
+}
+
+.inspiration {
+  @include mobile {
+    background-color: $color-white;
+    width: 40vw;
+    border-radius: 5vw;
+    .imageWrapper {
+      width: 40vw;
+      border-radius: 5vw;
+    }
+    .textWrapper {
+      width: 40vw;
+      border-radius: 5vw;
+      padding: 5vw;
+      h1 {
+        @include pretendard-4vw-800;
+      }
+      p {
+        @include pretendard-3-6vw-100;
       }
     }
   }

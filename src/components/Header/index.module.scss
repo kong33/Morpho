@@ -1,13 +1,24 @@
 @import '@/styles/global.scss';
+
 .headerContainer {
   width: 100%;
   padding: 6vh;
+
   .logoText {
     color: $color-black;
-    @include pretendard-30-900;
-    font-size: 3vw;
+    @include pretendard-8vw-600;
   }
+
   a {
     text-decoration: none;
+  }
+}
+//mobile
+@include mobile {
+  .headerContainer {
+    padding: 5vw;
+    .logoText {
+      @include pretendard-8vw-600;
+    }
   }
 }
