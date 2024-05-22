@@ -1,3 +1,5 @@
+@import '@/styles/global.scss';
+
 .embla {
   margin: auto;
   display: flex;
@@ -114,4 +116,26 @@
 }
 .embla__dot--selected:after {
   box-shadow: inset 0 0 0 0.2rem rgb(46, 46, 46);
+}
+
+@include mobile {
+  .embla {
+    --slide-height: 30vh;
+    --slide-size: 100vw;
+  }
+  .embla__viewport {
+    height: 30vh;
+    max-width: 100vw;
+  }
+  .embla__container {
+    height: 30vh;
+    width: 100vw;
+    img {
+      width: 100%;
+      border-radius: 3rem;
+    }
+  }
+  .embla__controls_arrow {
+    display: none;
+  }
 }

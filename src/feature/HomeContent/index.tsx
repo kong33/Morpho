@@ -5,16 +5,26 @@ import Card from '@/components/Card';
 import EmblaCarousel from '@/feature/Carousel/index';
 import styles from '@/feature/HomeContent/index.module.scss';
 import { productData } from '@/libs/constants/homepage';
+import useIsMobile from '@/libs/hooks/useIsMobile';
 import banner1 from '@/public/image/HomePage/homeBanner/banner1.jpg';
 import banner2 from '@/public/image/HomePage/homeBanner/banner2.jpg';
 import banner3 from '@/public/image/HomePage/homeBanner/banner3.jpg';
 import banner4 from '@/public/image/HomePage/homeBanner/banner4.jpg';
+import banner1Mb from '@/public/image/HomePage/homeBanner_mobile/banner1.jpg';
+import banner2Mb from '@/public/image/HomePage/homeBanner_mobile/banner2.jpg';
+import banner3Mb from '@/public/image/HomePage/homeBanner_mobile/banner3.jpg';
+import banner4Mb from '@/public/image/HomePage/homeBanner_mobile/banner4.jpg';
 import middleBanner from '@/public/image/HomePage/homeLowerBanner/homeMiddleBanner.jpg';
 
 const OPTIONS: EmblaOptionsType = { loop: true };
-const SLIDES = [banner1, banner2, banner3, banner4];
 
 export default function HomeContent() {
+  let SLIDES = [banner1, banner2, banner3, banner4];
+
+  const { isMobile } = useIsMobile();
+  if (isMobile) {
+    SLIDES = [banner1Mb, banner2Mb, banner3Mb, banner4Mb];
+  }
   return (
     <>
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
