@@ -74,12 +74,18 @@
 @include mobile {
   .categoryContainer {
     margin-top: 1vw;
-    height: 5vh;
+    height: 8vh;
   }
   .categoryMenuWrapper {
-    height: 5vh;
+    height: 8vh;
     li {
-      @include pretendard-3vw-300;
+      @include pretendard-4vw-800;
     }
+  }
+  .categoryContainer .detailMenu {
+    margin-bottom: 5vh;
+  }
+  .categoryContainer .detailMenu ul li {
+    @include pretendard-3-6vw-200;
   }
 }

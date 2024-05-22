@@ -1,15 +1,34 @@
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 import styles from '@/components/Category/index.module.scss';
+import { CATEGORY_MENU, CATEGORY_MENU_MOBILE } from '@/libs/constants';
 import useManageCategory from '@/libs/hooks/useManageCategory';
-import { categoryItemType } from '@/libs/types/CategoryType';
 
-export default function Category({ categoryMenu }: { categoryMenu: categoryItemType[] }) {
-  const { hideMenu, mouseEvent } = useManageCategory();
+export default function Category() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      const aspectRatio = window.innerWidth / window.innerHeight;
+      if (aspectRatio <= 3 / 2) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const { hideMenu, mouseEvent } = useManageCategory(isMobile);
+
+  const sizeBaseCategoryMenu = isMobile ? CATEGORY_MENU_MOBILE : CATEGORY_MENU;
   return (
     <nav className={styles.categoryContainer}>
       <ul className={styles.categoryMenuWrapper}>
-        {categoryMenu.map((menu, idx) => (
+        {sizeBaseCategoryMenu.map((menu, idx) => (
           <li
             key={menu.name}
             className={hideMenu[idx] ? 'active' : 'none'}
@@ -21,7 +40,7 @@ export default function Category({ categoryMenu }: { categoryMenu: categoryItemT
         ))}
       </ul>
       <div className={styles.detailMenu}>
-        {categoryMenu.map((menu, idx) => (
+        {sizeBaseCategoryMenu.map((menu, idx) => (
           <ul key={menu.name} onMouseEnter={() => mouseEvent(idx, true)} onMouseLeave={() => mouseEvent(idx, false)}>
             {menu.subMenus?.map((subMenu) => (
               <li key={subMenu}>
