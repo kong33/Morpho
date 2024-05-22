@@ -11,13 +11,16 @@
 }
 
 .HeroContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10rem;
+
   position: relative;
   width: 100%;
   height: 70vh;
   background-color: $color-category-hover;
-  display: flex;
-  gap: 10rem;
-  margin-top: 2rem;
+
   padding: 10rem;
 
   .textWrapper {
@@ -25,23 +28,41 @@
     flex-direction: column;
     gap: 3rem;
     width: 100%;
-    padding-top: 4rem;
+
     z-index: $zindex-modal-backdrop;
+    @include wide-desktop {
+      h1 {
+        @include pretendard-100-900;
+        display: inline-block;
+      }
 
-    h1 {
-      @include pretendard-60-900;
-      display: inline-block;
+      h2 {
+        @include pretendard-40-700;
+        display: inline-block;
+        line-height: 4rem;
+      }
+
+      p {
+        @include pretendard-24-100;
+        display: inline-block;
+      }
     }
+    @include desktop {
+      h1 {
+        @include pretendard-60-900;
+        display: inline-block;
+      }
 
-    h2 {
-      @include pretendard-24-600;
-      display: inline-block;
-      line-height: 4rem;
-    }
+      h2 {
+        @include pretendard-24-600;
+        display: inline-block;
+        line-height: 4rem;
+      }
 
-    p {
-      @include pretendard-20-100;
-      display: inline-block;
+      p {
+        @include pretendard-20-100;
+        display: inline-block;
+      }
     }
 
     .subTitle {

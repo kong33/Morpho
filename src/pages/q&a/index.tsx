@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import Hero from '@/components/Hero';
 import MainLayout from '@/layouts/MainLayout';
 import styles from '@/pages/q&a/index.module.scss';
-import qandaImg from '@/public/images/QandAPage/qanda.jpg';
+import qandaImg from '@/public/images/QandAPage/qandaBanner.jpg';
 
 export default function QandA() {
   return (
