@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className={styles.footerContainer}>
       <div className={styles.textWrapper}>
         <p>phone: 010-4288-0941</p>
-        <p> @Copy Right</p>
+        <p> @Copy Right : MIT</p>
       </div>
     </footer>
   );
