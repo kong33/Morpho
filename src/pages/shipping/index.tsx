@@ -7,7 +7,7 @@ import shippingImg from '@/public/image/Price&ServicePage/shippingBanner.jpg';
 
 export default function Shipping() {
   return (
-    <>
+    <div className={styles.HeroWrapper}>
       <Hero
         type="fullImage"
         imageUrl={shippingImg}
@@ -24,7 +24,7 @@ export default function Shipping() {
         className="ShippingHero"
       />
       <div className={styles.heroCover} />
-    </>
+    </div>
   );
 }
 Shipping.getLayout = function getLayout(page: ReactNode) {
