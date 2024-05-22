@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import { EmblaOptionsType } from 'embla-carousel';
+import { type EmblaOptionsType as CarouselOptions } from 'embla-carousel';
 import { DotButton, useDotButton } from '@/feature/Carousel/CarouselDotButton/index';
 import { PrevButton, NextButton, usePrevNextButtons } from '@/feature/Carousel/CarouselArrowButton/index';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -11,7 +11,7 @@ import Autoplay from 'embla-carousel-autoplay';
 
 type PropType = {
   slides: StaticImageData[];
-  options?: EmblaOptionsType;
+  options?: CarouselOptions;
 };
 
 const EmblaCarousel = (props: PropType) => {

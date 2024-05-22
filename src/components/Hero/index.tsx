@@ -16,7 +16,9 @@ export default function Hero({ type, imageUrl, title, subTitle, description, cla
       </section>
       <section className={styles.imageWrapper}>
         {imageUrl && type === 'fullImage' && <Image src={imageUrl} alt="welcomeMorpho" fill objectFit="cover" />}
-        {imageUrl && type === 'halfImage' && <Image src={imageUrl} alt="welcomeMorpho" fill />}
+        {imageUrl && type === 'halfImage' && (
+          <Image src={imageUrl} alt="welcomeMorpho" height={0} width={0} style={{ width: '100%', height: '100%' }} />
+        )}
       </section>
     </div>
   );

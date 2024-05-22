@@ -38,19 +38,45 @@ $cardTextWrapperHeight: 6rem;
   width: $cardWidth;
   height: $cardHeight;
   box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.3);
-  border-radius: 1rem;
+  border-radius: 1vw;
+
+  @include mobile {
+    width: 90vw;
+    height: 30vh;
+
+    .imageWrapper {
+      width: 100%;
+    }
+    .textWrapper {
+      h1 {
+        @include pretendard-10vw-600;
+      }
+    }
+  }
+  .imageWrapper {
+    position: relative;
+    height: 70%;
+  }
   .textWrapper {
+    position: relative;
+    top: 0;
+    height: 30%;
+    width: 100%;
     background-color: $color-primary1;
-    height: $cardTextWrapperHeight;
     padding: 1rem;
     color: $color-black;
     border-radius: 0 0 1rem 1rem;
+
+    display: flex;
+    justify-content: space-between;
+
     h1 {
       @include pretendard-20-600;
     }
 
     p {
       @include pretendard-10-100;
+      line-height: 1.4rem;
     }
   }
 }
