@@ -11,7 +11,7 @@ export const CATEGORY_MENU = [
   },
   { name: '참고 디자인', subMenus: ['Inspiration | 참고 디자인'], path: 'inspiration' },
   { name: '가격 & 서비스', subMenus: ['Price | 가격', 'Shipping | 배송'], path: 'price&shipping' },
-  { name: '문의하기', subMenus: ['Q&A'], path: 'Q&A' }
+  { name: '문의하기', subMenus: ['Q&A'], path: 'q&a' }
 ];
 
 export const productData = [
