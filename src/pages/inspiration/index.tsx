@@ -34,6 +34,7 @@ export default function Inspiration() {
             descriptions={[images?.size || '', images?.thickNess || '']}
             imageUrl={images?.imageUrl}
             isHoverAble
+            className="inspiration"
           />
         ))}
       </div>

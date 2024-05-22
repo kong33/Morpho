@@ -67,7 +67,6 @@ $cardTextWrapperHeight: 6rem;
     top: 0;
     height: 30%;
     width: 100%;
-    background-color: $color-primary1;
     color: $color-gray;
 
     display: flex;
@@ -88,7 +87,7 @@ $cardTextWrapperHeight: 6rem;
     position: relative;
     width: $cardWidth;
     height: $cardHeight;
-    background-color: $color-primary1;
+    background-color: $color-white;
     box-shadow: 2rem 2rem 0.5 $color-black;
   }
   &:hover {
@@ -320,5 +319,28 @@ $cardHeightHomePage: 30vw;
     align-items: center;
 
     @include pretendard-26-100;
+  }
+}
+
+.inspiration {
+  @include mobile {
+    background-color: $color-white;
+    width: 40vw;
+    border-radius: 5vw;
+    .imageWrapper {
+      width: 40vw;
+      border-radius: 5vw;
+    }
+    .textWrapper {
+      width: 40vw;
+      border-radius: 5vw;
+      padding: 5vw;
+      h1 {
+        @include pretendard-4vw-800;
+      }
+      p {
+        @include pretendard-3-6vw-100;
+      }
+    }
   }
 }
