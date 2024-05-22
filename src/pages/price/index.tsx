@@ -7,7 +7,7 @@ import priceBanner from '@/public/image/Price&ServicePage/priceBanner.jpg';
 
 export default function Price() {
   return (
-    <>
+    <div className={styles.HeroWrapper}>
       <Hero
         type="fullImage"
         imageUrl={priceBanner}
@@ -22,7 +22,7 @@ export default function Price() {
         className="PriceHero"
       />
       <div className={styles.heroCover} />
-    </>
+    </div>
   );
 }
 Price.getLayout = function getLayout(page: ReactNode) {

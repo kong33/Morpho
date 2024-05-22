@@ -63,7 +63,6 @@
         display: inline-block;
       }
     }
-
     .subTitle {
       display: flex;
       flex-direction: column;
@@ -77,6 +76,14 @@
   }
 }
 
+.fullImage {
+  .imageWrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    z-index: $zindex-fixed;
+  }
+}
 .ShippingHero,
 .PriceHero,
 .QandAHero {
@@ -119,6 +126,7 @@
     }
   }
 }
+
 .wallPanelDetail {
   background-color: $color-primary1;
   .imageWrapper {
