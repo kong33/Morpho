@@ -28,7 +28,7 @@ export default function useGetProductImages(folder: string) {
 
     const loadImages = async () => {
       try {
-        const response = await fetch(`/api/images/${folder}`);
+        const response = await fetch(`/api/image/${folder}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch images from ${folder}`);
         }

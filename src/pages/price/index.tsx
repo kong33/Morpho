@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import Hero from '@/components/Hero';
 import MainLayout from '@/layouts/MainLayout';
 import styles from '@/pages/price/index.module.scss';
-import priceBanner from '@/public/images/Price&ServicePage/priceBanner.jpg';
+import priceBanner from '@/public/image/Price&ServicePage/priceBanner.jpg';
 
 export default function Price() {
   return (

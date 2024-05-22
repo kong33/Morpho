@@ -5,7 +5,7 @@ import Hero from '@/components/Hero';
 import MainLayout from '@/layouts/MainLayout';
 import useGetProductImages from '@/libs/hooks/useGetProductImages';
 import styles from '@/pages/wallpanel/index.module.scss';
-import wallPanelDetail from '@/public/images/ProductImage/ProductCard/wallPanel.png';
+import wallPanelDetail from '@/public/image/ProductImage/ProductCard/wallPanel.png';
 
 export default function WallPanel() {
   const { images: wallPanelImages } = useGetProductImages('wallPanel');

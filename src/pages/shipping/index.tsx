@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import Hero from '@/components/Hero';
 import MainLayout from '@/layouts/MainLayout';
 import styles from '@/pages/q&a/index.module.scss';
-import shippingImg from '@/public/images/Price&ServicePage/shippingBanner.jpg';
+import shippingImg from '@/public/image/Price&ServicePage/shippingBanner.jpg';
 
 export default function Shipping() {
   return (

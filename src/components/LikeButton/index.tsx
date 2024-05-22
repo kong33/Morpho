@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState, MouseEvent } from 'react';
 
 import styles from '@/components/LikeButton/index.module.scss';
-import likeIcon from '@/public/images/Icon/likeIcon.png';
+import likeIcon from '@/public/image/Icon/likeIcon.png';
 
 const cn = classNames.bind(styles);
 export default function LikeButton() {
