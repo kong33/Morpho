@@ -4,6 +4,15 @@ const nextConfig = {
   sassOptions: {
     includePaths: ['styles'],
     additionalData: '@import "@/styles/global.scss";'
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+        port: ''
+      }
+    ]
   }
 };
 
