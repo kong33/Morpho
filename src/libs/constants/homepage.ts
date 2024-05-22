@@ -1,7 +1,7 @@
-import aluminumBoxImg from '@/public/images/product/aluminumBox.png';
-import manufacturingImg from '@/public/images/product/manufacturingAnodizing.png';
-import paintMarkingImg from '@/public/images/product/paintMarking.png';
-import wallPanelImg from '@/public/images/product/wallPanel.png';
+import aluminumBoxImg from '@/public/images/ProductImage/ProductCard/aluminumBox.png';
+import manufacturingImg from '@/public/images/ProductImage/ProductCard/manufacturingAnodizing.png';
+import paintMarkingImg from '@/public/images/ProductImage/ProductCard/paintMarking.png';
+import wallPanelImg from '@/public/images/ProductImage/ProductCard/wallPanel.png';
 
 export const productData = [
   {

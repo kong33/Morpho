@@ -77,3 +77,46 @@
     }
   }
 }
+
+.ShippingHero,
+.PriceHero,
+.QandAHero {
+  .textWrapper {
+    margin-top: 10rem;
+
+    @include wide-desktop {
+      h1 {
+        @include pretendard-60-900;
+        display: inline-block;
+      }
+
+      h2 {
+        @include pretendard-24-600;
+        display: inline-block;
+        line-height: 4rem;
+      }
+
+      p {
+        @include pretendard-16-100;
+        display: inline-block;
+      }
+    }
+    @include desktop {
+      h1 {
+        @include pretendard-50-900;
+        display: inline-block;
+      }
+
+      h2 {
+        @include pretendard-20-600;
+        display: inline-block;
+        line-height: 4rem;
+      }
+
+      p {
+        @include pretendard-26-100;
+        display: inline-block;
+      }
+    }
+  }
+}

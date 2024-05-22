@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import Hero from '@/components/Hero';
 import MainLayout from '@/layouts/MainLayout';
 import styles from '@/pages/price/index.module.scss';
-import priceBanner from '@/public/images/Price&Service/priceBanner.jpg';
+import priceBanner from '@/public/images/Price&ServicePage/priceBanner.jpg';
 
 export default function Price() {
   return (
@@ -19,7 +19,7 @@ export default function Price() {
           '연락 부탁드립니다.'
         ]}
         description={['010-8597-0941', 'umorpho@gmail.com']}
-        className={styles.PriceHero}
+        className="PriceHero"
       />
       <div className={styles.heroCover} />
     </>

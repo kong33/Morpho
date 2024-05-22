@@ -4,8 +4,9 @@ import styles from '@/components/Hero/index.module.scss';
 import { HeroProps } from '@/libs/types/HeroType';
 
 export default function Hero({ type, imageUrl, title, subTitle, description, className = '' }: HeroProps) {
+  const heroClass = styles[className] ? styles[className] : '';
   return (
-    <div className={`${styles[type]} ${styles.HeroContainer} ${styles[className]}}`}>
+    <div className={`${styles[type]} ${styles.HeroContainer} ${heroClass}`}>
       <section className={styles.textWrapper}>
         {title && <h1>{title}</h1>}
         <section className={styles.subTitle}>{subTitle && subTitle.map((item) => <h2 key={item}>{item}</h2>)}</section>

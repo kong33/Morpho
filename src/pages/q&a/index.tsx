@@ -14,7 +14,7 @@ export default function QandA() {
         title="Q&A"
         subTitle={['질문이 필요하시면 다음의 번호나 이메일로', '연락 부탁드립니다.']}
         description={['010-8597-0941', 'umorpho@gmail.com']}
-        className={styles.QandAHero}
+        className="QandAHero"
       />
       <div className={styles.heroCover} />
     </>

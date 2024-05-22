@@ -11,7 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
   // 이미지가 저장된 디렉토리 경로 설정
-  const directoryPath = path.join(process.cwd(), 'public', 'images', folder);
+  const directoryPath = path.join(process.cwd(), 'public', 'images', 'ProductImage', folder);
 
   // 디렉토리 내의 모든 파일 읽기
   fs.readdir(directoryPath, (err, files) => {
