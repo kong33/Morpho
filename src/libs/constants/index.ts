@@ -13,6 +13,7 @@ export const CATEGORY_MENU = [
   { name: '가격 & 서비스', subMenus: ['Price | 가격', 'Shipping | 배송'], path: 'price&shipping' },
   { name: '문의하기', subMenus: ['Q&A'], path: 'q&a' }
 ];
+
 export const CATEGORY_MENU_MOBILE = [
   {
     name: '제품',
@@ -20,7 +21,14 @@ export const CATEGORY_MENU_MOBILE = [
     path: 'product'
   },
   { name: '참고 디자인', subMenus: ['참고 디자인'], path: 'inspiration' },
-  { name: '가격 & 서비스', subMenus: ['가격', '배송'], path: 'price&shipping' },
+  {
+    name: '가격 & 서비스',
+    subMenus: [
+      { name: '가격', path: 'price' },
+      { name: '배송', path: 'shipping' }
+    ],
+    path: 'price&shipping'
+  },
   { name: '문의하기', subMenus: ['Q&A'], path: 'q&a' }
 ];
 
