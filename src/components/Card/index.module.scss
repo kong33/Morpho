@@ -43,13 +43,18 @@ $cardTextWrapperHeight: 6rem;
   @include mobile {
     width: 90vw;
     height: 30vh;
-
+    border-radius: 5vw;
     .imageWrapper {
       width: 100%;
     }
     .textWrapper {
+      padding: 5vw;
+      border-radius: 5vw;
       h1 {
-        @include pretendard-20-600;
+        @include pretendard-6vw-600;
+      }
+      p {
+        @include pretendard-4vw-200;
       }
     }
   }
@@ -63,21 +68,10 @@ $cardTextWrapperHeight: 6rem;
     height: 30%;
     width: 100%;
     background-color: $color-primary1;
-    padding: 1rem;
-    color: $color-black;
-    border-radius: 0 0 1rem 1rem;
+    color: $color-gray;
 
     display: flex;
     justify-content: space-between;
-
-    h1 {
-      @include pretendard-20-600;
-    }
-
-    p {
-      @include pretendard-10-100;
-      line-height: 1.4rem;
-    }
   }
 }
 
@@ -291,6 +285,7 @@ $cardHeightHomePage: 30vw;
     flex-direction: column;
     align-items: center;
     padding: 4rem;
+
     .imageWrapper {
       width: 50vw;
       height: 50vw;
