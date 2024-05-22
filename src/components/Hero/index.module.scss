@@ -90,6 +90,21 @@
   .textWrapper {
     margin-top: 10rem;
 
+    @include mobile {
+      .imageWrapper {
+        height: 30vh;
+      }
+
+      h1 {
+        @include pretendard-10vw-800;
+      }
+      h2 {
+        @include pretendard-6vw-200;
+      }
+      p {
+        @include pretendard-3-6vw-100;
+      }
+    }
     @include wide-desktop {
       h1 {
         @include pretendard-60-900;
