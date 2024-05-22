@@ -15,16 +15,19 @@ import banner2Mb from '@/public/image/HomePage/homeBanner_mobile/banner2.jpg';
 import banner3Mb from '@/public/image/HomePage/homeBanner_mobile/banner3.jpg';
 import banner4Mb from '@/public/image/HomePage/homeBanner_mobile/banner4.jpg';
 import middleBanner from '@/public/image/HomePage/homeLowerBanner/homeMiddleBanner.jpg';
+import middleBannerMB from '@/public/image/HomePage/homeLowerBanner/homeMiddleBanner_mobile.jpg';
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 
 export default function HomeContent() {
   let SLIDES = [banner1, banner2, banner3, banner4];
-
+  let middleBannerImg = middleBanner;
   const { isMobile } = useIsMobile();
   if (isMobile) {
     SLIDES = [banner1Mb, banner2Mb, banner3Mb, banner4Mb];
+    middleBannerImg = middleBannerMB;
   }
+
   return (
     <>
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
@@ -48,7 +51,7 @@ export default function HomeContent() {
       <div className={styles.halfBackground}>
         <div className={styles.middleBanner}>
           <Image
-            src={middleBanner}
+            src={middleBannerImg}
             alt="middleBanner"
             width={0}
             height={0}
