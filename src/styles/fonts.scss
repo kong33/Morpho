@@ -152,10 +152,17 @@
   line-height: normal;
 }
 
-@mixin pretendard-10vw-600 {
+@mixin pretendard-8vw-600 {
   font-family: 'Pretendard-Regular';
-  font-size: 10vw;
+  font-size: 8vw;
   font-style: normal;
   font-weight: 600;
+  line-height: normal;
+}
+@mixin pretendard-3vw-300 {
+  font-family: 'Pretendard-Regular';
+  font-size: 3vw;
+  font-style: normal;
+  font-weight: 300;
   line-height: normal;
 }
