@@ -290,6 +290,7 @@ $cardHeightHomePage: 30vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 4rem;
     .imageWrapper {
       width: 50vw;
       height: 50vw;
@@ -310,5 +311,19 @@ $cardHeightHomePage: 30vw;
         line-height: 6vw;
       }
     }
+  }
+
+  .redirectButton {
+    width: 20vw;
+    height: 3vh;
+    border-radius: 3rem;
+    background-color: rgba(255, 255, 255, 0.6);
+
+    color: $color-primary4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include pretendard-26-100;
   }
 }

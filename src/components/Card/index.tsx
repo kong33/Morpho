@@ -44,7 +44,9 @@ export default function Card({
       </div>
       {redirectUrl && (
         <Link href={redirectUrl}>
-          <button type="button">Learn More</button>
+          <button type="button" className={styles.redirectButton}>
+            Learn More
+          </button>
         </Link>
       )}
     </article>

@@ -15,7 +15,7 @@ export const productData = [
     ],
     imageUrl: wallPanelImg,
     isHoverAble: false,
-    redirectUrl: '',
+    redirectUrl: '/wallpanel',
     className: 'wallPanel'
   },
   {
@@ -28,7 +28,7 @@ export const productData = [
     ],
     imageUrl: aluminumBoxImg,
     isHoverAble: false,
-    redirectUrl: '',
+    redirectUrl: '/aluminumbox',
     className: 'aluminumBox'
   },
   {
@@ -42,7 +42,7 @@ export const productData = [
     ],
     imageUrl: manufacturingImg,
     isHoverAble: false,
-    redirectUrl: '',
+    redirectUrl: '/manufacturing&anodizing',
     className: 'manuFacturingAnodizing'
   },
   {
@@ -51,7 +51,7 @@ export const productData = [
     descriptions: ['판넬 레터링과 로고 인쇄는', '음각조각 후 페인팅, UV 프린팅,', '레이저 가공 등으로 제작합니다.'],
     imageUrl: paintMarkingImg,
     isHoverAble: false,
-    redirectUrl: '',
+    redirectUrl: '/paint&marking',
     className: 'paintMarking'
   }
 ];
