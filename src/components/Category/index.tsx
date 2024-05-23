@@ -1,3 +1,4 @@
+// 주석
 import Link from 'next/link';
 
 import styles from '@/components/Category/index.module.scss';
