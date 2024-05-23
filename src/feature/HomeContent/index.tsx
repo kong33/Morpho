@@ -55,7 +55,6 @@ export default function HomeContent() {
             alt="middleBanner"
             width={0}
             height={0}
-            // sizes="100vw"
             style={{ width: 'min(100%, 1920px)', height: 'auto' }}
           />
         </div>

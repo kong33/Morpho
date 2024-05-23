@@ -2,22 +2,22 @@ import { ReactElement } from 'react';
 
 import styles from '@/components/SearchBar/index.module.scss';
 import useSearchKeyword from '@/libs/hooks/useSearchKeyword';
-
+import useIsMobile from '@/libs/hooks/useIsMobile';
 export default function SearchBar({
   Icon,
   ResetButton,
   placeHolder,
-  className,
   ...rest
 }: {
   Icon: ReactElement;
   ResetButton: ReactElement;
   placeHolder: string;
-  className?: string;
 }) {
   const { handleSearchValueChange, handleResetButtonClick, searchValue } = useSearchKeyword();
+
+  const { isMobile } = useIsMobile();
   return (
-    <div className={`${styles.searchBarWrapper} ${className && styles[className]}`}>
+    <div className={`${styles.searchBarWrapper} ${isMobile && styles.mobile}`}>
       <div className={styles.searchBarIcon}>{Icon}</div>
       <input
         placeholder={placeHolder}
