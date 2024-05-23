@@ -9,7 +9,7 @@ $cardTextWrapperHeight: 6rem;
   width: $cardWidth;
   height: $cardHeight;
   position: relative;
-  padding: 2rem;
+  padding: 3vh;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
 
   .imageWrapper {
@@ -121,11 +121,11 @@ $cardTextWrapperHeight: 6rem;
 }
 
 $cardWidthHomePage: 23vw;
-$cardHeightHomePage: 30vw;
+$cardHeightHomePage: 40vw;
 
-.wallPanel,
-.aluminumBox,
 .paintMarking,
+.aluminumBox,
+.wallPanel,
 .manuFacturingAnodizing {
   width: $cardWidthHomePage;
   height: $cardHeightHomePage;
@@ -133,28 +133,25 @@ $cardHeightHomePage: 30vw;
   border-radius: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 0rem;
-
+  align-items: center;
+  justify-content: space-between;
   .imageWrapper {
     width: 20vw;
     height: 18vw;
   }
   .textWrapper {
     color: $color-black;
-    gap: 2rem;
+    gap: 3vh;
   }
-}
-
-.paintMarking,
-.aluminumBox,
-.wallPanel,
-.manuFacturingAnodizing {
   @include wide-desktop {
     .cardWrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      height: auto;
+      gap: 8vh;
+      padding: 5vh;
+    }
+    .imageWrapper {
+      width: 20vw;
+      height: 18vw;
     }
 
     .textWrapper {
@@ -168,8 +165,13 @@ $cardHeightHomePage: 30vw;
 
     .redirectButton {
       @include pretendard-1vw-400;
+      height: 5vh;
+      width: 20vw;
+      border-radius: 7vh;
     }
   }
+
+  //모바일
   @include mobile {
     width: 90vw;
     height: 90vw;
@@ -201,9 +203,6 @@ $cardHeightHomePage: 30vw;
   }
 
   .redirectButton {
-    width: 20vw;
-    height: 3vh;
-    border-radius: 3rem;
     background-color: rgba(255, 255, 255, 0.6);
 
     color: $color-primary4;

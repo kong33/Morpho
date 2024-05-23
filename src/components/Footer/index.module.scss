@@ -26,3 +26,11 @@
     }
   }
 }
+
+@include wide-desktop {
+  .textWrapper {
+    p {
+      @include pretendard-1vw-400;
+    }
+  }
+}
