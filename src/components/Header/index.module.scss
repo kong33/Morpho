@@ -22,3 +22,11 @@
     }
   }
 }
+
+@include wide-desktop {
+  .headerContainer {
+    .logoText {
+      @include pretendard-4vw-800;
+    }
+  }
+}
