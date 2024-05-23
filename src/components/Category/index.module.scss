@@ -89,3 +89,13 @@
     @include pretendard-3-6vw-200;
   }
 }
+
+@include wide-desktop {
+  .categoryContainer {
+    .categoryMenuWrapper {
+      li {
+        @include pretendard-2vw-600;
+      }
+    }
+  }
+}
