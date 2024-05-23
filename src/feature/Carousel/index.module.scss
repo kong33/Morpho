@@ -139,3 +139,35 @@
     display: none;
   }
 }
+
+@include wide-desktop {
+  .embla {
+    --slide-height: 30vw;
+    --slide-size: 80vw;
+  }
+  .embla__viewport {
+    height: 30vw;
+    max-width: 80vw;
+  }
+  .embla__controls_arrow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+
+    position: relative;
+    top: -19vw;
+  }
+  .embla__controls_dots {
+    position: relative;
+    top: -9vw;
+  }
+  .embla__container {
+    height: 20vw;
+    width: 80vw;
+    img {
+      width: 100%;
+      border-radius: 3rem;
+    }
+  }
+}

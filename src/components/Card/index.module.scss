@@ -9,12 +9,13 @@ $cardTextWrapperHeight: 6rem;
   width: $cardWidth;
   height: $cardHeight;
   position: relative;
-  padding: 2rem;
+  padding: 3vh;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
 
   .imageWrapper {
     position: relative;
   }
+
   .textWrapper {
     z-index: $zindex-dropdown;
     color: $color-white;
@@ -25,12 +26,6 @@ $cardTextWrapperHeight: 6rem;
     border-radius: 1rem;
 
     flex-wrap: wrap;
-    h1 {
-      @include pretendard-24-600;
-    }
-    p {
-      @include pretendard-10-100;
-    }
   }
 }
 
@@ -51,13 +46,37 @@ $cardTextWrapperHeight: 6rem;
       padding: 5vw;
       border-radius: 5vw;
       h1 {
-        @include pretendard-6vw-600;
+        @include pretendard-4vw-800;
       }
       p {
         @include pretendard-4vw-200;
       }
     }
   }
+
+  @include wide-desktop {
+    width: 20vw;
+    height: 24vw;
+    border-radius: 1vw;
+
+    .textWrapper {
+      padding: 2vw;
+      background-color: $color-primary1;
+      border-radius: 0 0 1vw 1vw;
+      h1 {
+        @include pretendard-1-4vw-600;
+      }
+      p {
+        @include pretendard-1vw-400;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+      }
+    }
+  }
+
   .imageWrapper {
     position: relative;
     height: 70%;
@@ -104,7 +123,7 @@ $cardTextWrapperHeight: 6rem;
     z-index: $zindex-image-cover;
     width: $cardWidth;
     height: $cardHeight;
-    background-color: rgba(20, 108, 148, 0.7);
+    background-color: rgba(57, 58, 59, 0.7);
     border-radius: 1rem;
     position: absolute;
     top: 0;
@@ -126,157 +145,57 @@ $cardTextWrapperHeight: 6rem;
 }
 
 $cardWidthHomePage: 23vw;
-$cardHeightHomePage: 30vw;
+$cardHeightHomePage: 40vw;
 
-.wallPanel {
+.paintMarking,
+.aluminumBox,
+.wallPanel,
+.manuFacturingAnodizing {
   width: $cardWidthHomePage;
   height: $cardHeightHomePage;
   background-color: $color-primary1;
   border-radius: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 0rem;
-
+  align-items: center;
+  justify-content: space-between;
   .imageWrapper {
     width: 20vw;
     height: 18vw;
   }
   .textWrapper {
     color: $color-black;
-    gap: 2rem;
+    gap: 3vh;
+  }
+  @include wide-desktop {
+    .cardWrapper {
+      height: auto;
+      gap: 8vh;
+      padding: 5vh;
+    }
+    .imageWrapper {
+      width: 20vw;
+      height: 18vw;
+    }
 
-    @include wide-desktop {
+    .textWrapper {
       h1 {
-        @include pretendard-70-700;
+        @include pretendard-3vw-600;
       }
       p {
-        @include pretendard-24-100;
+        @include pretendard-1vw-400;
       }
     }
-    @include desktop {
-      h1 {
-        @include pretendard-24-600;
-      }
-      p {
-        @include pretendard-14-200;
-        line-height: 2rem;
-      }
+
+    .redirectButton {
+      @include pretendard-1vw-400;
+      height: 5vh;
+      width: 20vw;
+      border-radius: 7vh;
     }
   }
-}
 
-.aluminumBox {
-  width: $cardWidthHomePage;
-  height: $cardHeightHomePage;
-  background-color: $color-primary2;
-  border-radius: 3rem;
-
-  display: flex;
-  flex-direction: column;
-  gap: 0rem;
-
-  .imageWrapper {
-    width: 20vw;
-    height: 18vw;
-  }
-  .textWrapper {
-    color: $color-black;
-
-    @include wide-desktop {
-      h1 {
-        @include pretendard-70-700;
-      }
-      p {
-        @include pretendard-24-100;
-      }
-    }
-    @include desktop {
-      h1 {
-        @include pretendard-24-600;
-      }
-      p {
-        @include pretendard-14-200;
-        line-height: 2rem;
-      }
-    }
-  }
-}
-.manuFacturingAnodizing {
-  width: $cardWidthHomePage;
-  height: $cardHeightHomePage;
-  background-color: $color-primary3;
-  border-radius: 3rem;
-
-  display: flex;
-  flex-direction: column;
-  gap: 0rem;
-  .imageWrapper {
-    width: 20vw;
-    height: 18vw;
-  }
-  .textWrapper {
-    color: $color-black;
-
-    @include wide-desktop {
-      h1 {
-        @include pretendard-70-700;
-      }
-      p {
-        @include pretendard-24-100;
-      }
-    }
-    @include desktop {
-      h1 {
-        @include pretendard-24-600;
-      }
-      p {
-        @include pretendard-14-200;
-        line-height: 2rem;
-      }
-    }
-  }
-}
-
-.paintMarking {
-  width: $cardWidthHomePage;
-  height: $cardHeightHomePage;
-  background-color: $color-primary4;
-  border-radius: 3rem;
-
-  display: flex;
-  flex-direction: column;
-  gap: 0rem;
-  .imageWrapper {
-    width: 20vw;
-    height: 18vw;
-  }
-  .textWrapper {
-    color: $color-black;
-
-    @include wide-desktop {
-      h1 {
-        @include pretendard-70-700;
-      }
-      p {
-        @include pretendard-24-100;
-      }
-    }
-    @include desktop {
-      h1 {
-        @include pretendard-24-600;
-      }
-      p {
-        @include pretendard-14-200;
-        line-height: 2rem;
-      }
-    }
-  }
-}
-
-.paintMarking,
-.aluminumBox,
-.wallPanel,
-.manuFacturingAnodizing {
+  //모바일
   @include mobile {
     width: 90vw;
     height: 90vw;
@@ -308,9 +227,6 @@ $cardHeightHomePage: 30vw;
   }
 
   .redirectButton {
-    width: 20vw;
-    height: 3vh;
-    border-radius: 3rem;
     background-color: rgba(255, 255, 255, 0.6);
 
     color: $color-primary4;
@@ -318,11 +234,36 @@ $cardHeightHomePage: 30vw;
     justify-content: center;
     align-items: center;
 
-    @include pretendard-2vw-100;
   }
 }
 
+.aluminumBox {
+  background-color: $color-primary2;
+}
+.manuFacturingAnodizing {
+  background-color: $color-primary3;
+}
+.paintMarking {
+  background-color: $color-primary4;
+}
+//inspiration
 .inspiration {
+  @include wide-desktop {
+    border-radius: 4vh;
+    .textWrapper {
+      h1 {
+        @include pretendard-2vw-600;
+      }
+      p {
+        @include pretendard-1vw-400;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+      }
+    }
+  }
   @include mobile {
     background-color: $color-white;
     width: 40vw;

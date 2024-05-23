@@ -18,7 +18,7 @@ export default function Price() {
           '친절히 상담해 드리겠습니다.',
           '연락 부탁드립니다.'
         ]}
-        description={['010-8597-0941', 'umorpho@gmail.com']}
+        description={['010-4288-0941', 'umorpho@gmail.com']}
         className="PriceHero"
       />
       <div className={styles.heroCover} />

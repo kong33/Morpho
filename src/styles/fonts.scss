@@ -223,3 +223,48 @@
   font-weight: 600;
   line-height: normal;
 }
+@mixin pretendard-2vw-600 {
+  font-family: 'Pretendard-Regular';
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin pretendard-2vw-300 {
+  font-family: 'Pretendard-Regular';
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+@mixin pretendard-3vw-600 {
+  font-family: 'Pretendard-Regular';
+  font-size: 3vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@mixin pretendard-1vw-400 {
+  font-family: 'Pretendard-Regular';
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin pretendard-1-4vw-600 {
+  font-family: 'Pretendard-Regular';
+  font-size: 1.4vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@mixin pretendard-1-4vw-200 {
+  font-family: 'Pretendard-Regular';
+  font-size: 1.4vw;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
