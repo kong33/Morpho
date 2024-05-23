@@ -159,7 +159,15 @@
     margin-top: 4rem;
   }
 }
+.manufacturingDetail {
+  background-color: $color-primary3;
 
+  .imageWrapper {
+    width: 100%;
+    height: auto;
+    margin-top: 4rem;
+  }
+}
 @include mobile {
   .wallPanelDetail {
     display: flex;
