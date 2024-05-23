@@ -8,7 +8,7 @@ import useGetProductImages from '@/libs/hooks/useGetProductImages';
 import styles from '@/pages/inspiration/index.module.scss';
 import SearchBarIcon from '@/public/svg/SearchBarIcon';
 import CloseButton from '@/public/svg/closeButton';
-
+// 빌드를 위한 주석
 export default function Inspiration() {
   let imagesList = [];
   const { images: wallPanelImages } = useGetProductImages(PRODUCT_IMAGE[0]);
