@@ -123,7 +123,7 @@ $cardTextWrapperHeight: 6rem;
     z-index: $zindex-image-cover;
     width: $cardWidth;
     height: $cardHeight;
-    background-color: rgba(20, 108, 148, 0.7);
+    background-color: rgba(57, 58, 59, 0.7);
     border-radius: 1rem;
     position: absolute;
     top: 0;
@@ -247,6 +247,22 @@ $cardHeightHomePage: 40vw;
 }
 //inspiration
 .inspiration {
+  @include wide-desktop {
+    border-radius: 4vh;
+    .textWrapper {
+      h1 {
+        @include pretendard-2vw-600;
+      }
+      p {
+        @include pretendard-1vw-400;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+      }
+    }
+  }
   @include mobile {
     background-color: $color-white;
     width: 40vw;
