@@ -92,10 +92,17 @@
 
 @include wide-desktop {
   .categoryContainer {
+    z-index: $zindex-sticky;
+    margin-top: 8vh;
+    height: 8vh;
     .categoryMenuWrapper {
+      height: 8vh;
       li {
-        @include pretendard-2vw-600;
+        @include pretendard-1-4vw-600;
       }
     }
+  }
+  .categoryContainer .detailMenu ul li {
+    @include pretendard-1vw-400;
   }
 }
