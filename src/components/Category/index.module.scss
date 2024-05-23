@@ -39,7 +39,7 @@
 
 .categoryContainer .detailMenu {
   background-color: $color-white;
-  z-index: $zindex-fixed;
+  z-index: $zindex-popover;
   position: absolute;
   display: flex;
   overflow: visible;
@@ -47,13 +47,14 @@
 
 .categoryContainer .detailMenu ul {
   width: 25vw;
-  margin: auto;
+  z-index: $zindex-popover;
   justify-content: space-around;
   padding: 0;
   text-align: center;
 }
 
 .categoryContainer .detailMenu ul li {
+  z-index: $zindex-popover;
   background-color: $color-white;
   list-style-type: none;
   display: block;
