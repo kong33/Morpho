@@ -3,6 +3,7 @@
 .headerContainer {
   width: 100%;
   padding: 6vh;
+  z-index: $zindex-fixed;
 
   .logoText {
     color: $color-black;
@@ -19,6 +20,14 @@
     padding: 5vw;
     .logoText {
       @include pretendard-8vw-600;
+    }
+  }
+}
+
+@include wide-desktop {
+  .headerContainer {
+    .logoText {
+      @include pretendard-2vw-600;
     }
   }
 }

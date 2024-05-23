@@ -198,12 +198,17 @@ $cardHeightHomePage: 40vw;
   //모바일
   @include mobile {
     width: 90vw;
-    height: 90vw;
+    height: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 4rem;
-
+    .redirectButton {
+      width: 50vw;
+      height: 8vw;
+      @include pretendard-3-6vw-200;
+      border-radius: 3vh;
+    }
     .imageWrapper {
       width: 50vw;
       height: 50vw;
@@ -214,7 +219,7 @@ $cardHeightHomePage: 40vw;
       color: $color-black;
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
 
       h1 {
         @include pretendard-10vw-800;
@@ -223,12 +228,6 @@ $cardHeightHomePage: 40vw;
         @include pretendard-4vw-200;
         line-height: 6vw;
       }
-    }
-    .redirectButton {
-      width: 50vw;
-      height: 10vw;
-      border-radius: 7vh;
-      @include pretendard-4vw-800;
     }
   }
 

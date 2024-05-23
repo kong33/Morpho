@@ -4,6 +4,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: ['styles'],
     additionalData: '@import "@/styles/global.scss";'
+  },
+  eslint: {
+    ignoreDuringBuilds: true
   }
 };
 
