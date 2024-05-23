@@ -3,7 +3,6 @@ import { ReactElement } from 'react';
 import styles from '@/components/SearchBar/index.module.scss';
 import useIsMobile from '@/libs/hooks/useIsMobile';
 import useSearchKeyword from '@/libs/hooks/useSearchKeyword';
-
 export default function SearchBar({
   Icon,
   ResetButton,
@@ -16,12 +15,9 @@ export default function SearchBar({
 }) {
   const { isMobile } = useIsMobile();
   const { handleSearchValueChange, handleResetButtonClick, searchValue } = useSearchKeyword();
-  let className = '';
-  if (isMobile) {
-    className = 'mobile';
-  }
+
   return (
-    <div className={`${styles.searchBarWrapper} ${className && styles[className]}`}>
+    <div className={`${styles.searchBarWrapper} ${isMobile && styles.mobile}`}>
       <div className={styles.searchBarIcon}>{Icon}</div>
       <input
         placeholder={placeHolder}
