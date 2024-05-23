@@ -31,14 +31,13 @@
     z-index: $zindex-modal-backdrop;
     @include wide-desktop {
       h1 {
-        @include pretendard-100-900;
+        @include pretendard-4vw-800;
         display: inline-block;
       }
 
       h2 {
-        @include pretendard-40-700;
-        display: inline-block;
-        line-height: 5rem;
+        @include pretendard-1-4vw-200;
+        line-height: 5vh;
       }
 
       p {
@@ -107,7 +106,7 @@
     }
     @include wide-desktop {
       h1 {
-        @include pretendard-60-900;
+        @include pretendard-2vw-600;
         display: inline-block;
       }
 
