@@ -17,6 +17,19 @@ $imageWideHeight: 35vh;
   padding: 10rem;
   color: $color-black;
   cursor: pointer;
+
+  @include wide-desktop {
+    padding: 5vh;
+    height: 60vh;
+    .accordionWrapper {
+      h1 {
+        @include pretendard-6vw-600;
+      }
+      p {
+        @include pretendard-2vw-300;
+      }
+    }
+  }
 }
 
 .wide {
@@ -40,6 +53,7 @@ $imageWideHeight: 35vh;
     height: $imageWideHeight;
   }
 }
+
 .imageWrapper {
   width: $imageWidth;
   height: $imageHeight;
