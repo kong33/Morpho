@@ -16,8 +16,8 @@ import banner2Mb from '@/public/image/HomePage/homeBanner_mobile/banner2.jpg';
 import banner3Mb from '@/public/image/HomePage/homeBanner_mobile/banner3.jpg';
 import banner4Mb from '@/public/image/HomePage/homeBanner_mobile/banner4.jpg';
 import banner5Mb from '@/public/image/HomePage/homeBanner_mobile/banner5.jpg';
-import middleBanner from '@/public/image/HomePage/homeLowerBanner/homeMiddleBanner.jpg';
-import middleBannerMB from '@/public/image/HomePage/homeLowerBanner/homeMiddleBanner_mobile.jpg';
+import middleBanner from '@/public/image/HomePage/homeLowerBanner/homeMiddleBanner4.jpg';
+import middleBannerMB from '@/public/image/HomePage/homeLowerBanner/homeMiddleBanner3.jpg';
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 
