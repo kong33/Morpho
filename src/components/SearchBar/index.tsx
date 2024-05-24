@@ -3,6 +3,7 @@ import { ReactElement } from 'react';
 import styles from '@/components/SearchBar/index.module.scss';
 import useIsMobile from '@/libs/hooks/useIsMobile';
 import useSearchKeyword from '@/libs/hooks/useSearchKeyword';
+
 export default function SearchBar({
   Icon,
   ResetButton,
