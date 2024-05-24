@@ -9,18 +9,17 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 4rem;
+    padding: 4vh;
   }
 }
 
 @include mobile {
   .footerContainer {
-    height: 10vh;
-    margin-top: 10vh;
+    height: 20vh;
   }
 
   .textWrapper {
-    height: 10vh;
+    height: 20vh;
     p {
       @include pretendard-3-6vw-100;
     }
