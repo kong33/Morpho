@@ -36,13 +36,41 @@
 }
 
 .mobile {
+  width: 100vw;
+
+  .searchBarIcon {
+    width: 10vw;
+    height: 10vw;
+
+    padding: 1vw 2vw 2vw 2vw;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .closeButton {
+    width: 5vw;
+    height: 5vw;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
   .inputSection {
+    padding: 2vw 10vw;
     height: 5vh;
     border-radius: 5vw;
     @include pretendard-3-6vw-100;
   }
 }
+
 @include wide-desktop {
+  .searchBarIcon {
+    position: absolute;
+    left: 2rem;
+  }
   .inputSection {
     padding: 3vh 4vw 3vh 4vw;
     @include pretendard-1-4vw-200;
