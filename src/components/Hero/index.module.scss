@@ -178,34 +178,27 @@
   }
 }
 
-.paintAndMarkingDetail {
-  background-color: $color-primary4;
-
-  .imageWrapper {
-    width: 100%;
-    height: auto;
-    margin-top: 10vh;
-  }
-}
-
 @include mobile {
-  .wallPanelDetail {
+  .wallPanelDetail,
+  .manufacturingDetail,
+  .aluminumBoxDetail,
+  .paintAndMarkingDetail {
     display: flex;
     flex-direction: column;
-    height: 50vh;
-    padding-top: 5rem;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
     gap: 0;
 
     .imageWrapper {
-      width: 80vw;
+      width: 60vw;
       height: auto;
     }
     .textWrapper {
       h1 {
-        @include pretendard-10vw-800;
+        @include pretendard-6vw-600;
       }
       h2 {
-        @include pretendard-4vw-200;
+        @include pretendard-3-6vw-100;
       }
     }
   }

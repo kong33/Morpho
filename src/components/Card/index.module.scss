@@ -222,10 +222,10 @@ $cardHeightHomePage: 40vw;
       align-items: flex-start;
 
       h1 {
-        @include pretendard-10vw-800;
+        @include pretendard-6vw-600;
       }
       p {
-        @include pretendard-4vw-200;
+        @include pretendard-3-6vw-200;
         line-height: 6vw;
       }
     }

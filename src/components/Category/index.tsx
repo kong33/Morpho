@@ -18,6 +18,7 @@ export default function Category() {
       className={styles.categoryContainer}
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
+      onClick={() => setIsOpen(false)}
     >
       <ul className={styles.categoryMenuWrapper}>
         {sizeBaseCategoryMenu.map((menu, idx) => (
@@ -32,7 +33,7 @@ export default function Category() {
         ))}
       </ul>
       {isOpen && (
-        <div className={styles.detailMenu}>
+        <div className={styles.detailMenu} onClick={() => setIsOpen(false)}>
           {sizeBaseCategoryMenu.map((menu, idx) => (
             <ul key={menu.name} onMouseEnter={() => mouseEvent(idx, true)} onMouseLeave={() => mouseEvent(idx, false)}>
               {menu.subMenus?.map((subMenu) => (

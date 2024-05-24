@@ -8,9 +8,13 @@ export default function useManageCategory(isMobile: boolean) {
   const [hideMenu, setHideMenu] = useState(Array(category.length).fill(false));
 
   const mouseEvent = (index: number, isShow: boolean) => {
-    const change = [...hideMenu];
-    change[index] = isShow;
-    setHideMenu(change);
+    const delay = 300;
+
+    setTimeout(() => {
+      const change = [...hideMenu];
+      change[index] = isShow;
+      setHideMenu(change);
+    }, delay);
   };
 
   return { hideMenu, mouseEvent };
