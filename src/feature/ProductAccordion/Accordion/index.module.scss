@@ -12,7 +12,7 @@ $imageWideHeight: 35vh;
     flex-shrink 0.5s ease;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2vw;
   gap: 2rem;
   padding: 10rem;
   color: $color-black;
@@ -54,9 +54,7 @@ $imageWideHeight: 35vh;
     transition: flex-basis 4s ease; /* 크기 변화에 대한 부드러운 트랜지션 적용 */
   }
 }
-@include tablet {
-  @include responsive-wide;
-}
+
 @include mobile {
   .accordionWrapper {
     display: flex;
@@ -66,6 +64,8 @@ $imageWideHeight: 35vh;
     .imageWrapper {
       width: 90vw;
     }
-    @include responsive-wide;
   }
+}
+
+@include wide-desktop {
 }
