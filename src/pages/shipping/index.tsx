@@ -18,7 +18,7 @@ export default function Shipping() {
           '급속 배송을 원하실 경우',
           '아래의 연락처로 연락 부탁드립니다.'
         ]}
-        description={['010-8597-0941', 'umorpho@gmail.com']}
+        description={['010-4288-0941', 'umorpho@gmail.com']}
         className="ShippingHero"
       />
       <div className={styles.heroCover} />

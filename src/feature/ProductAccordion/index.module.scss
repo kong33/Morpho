@@ -4,6 +4,7 @@
   display: flex;
   width: 100%;
   height: auto;
+  padding-top: 5vh;
 
   > * {
     flex-grow: 1;
@@ -25,5 +26,13 @@
   }
   @include tablet {
     flex-direction: column;
+  }
+  @include wide-desktop {
+    h1 {
+      @include pretendard-2vw-600;
+    }
+    p {
+      @include pretendard-1vw-400;
+    }
   }
 }
