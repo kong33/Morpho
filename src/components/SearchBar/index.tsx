@@ -16,12 +16,9 @@ export default function SearchBar({
 }) {
   const { isMobile } = useIsMobile();
   const { handleSearchValueChange, handleResetButtonClick, searchValue } = useSearchKeyword();
-  let className = '';
-  if (isMobile) {
-    className = 'mobile';
-  }
+
   return (
-    <div className={`${styles.searchBarWrapper} ${className && styles[className]}`}>
+    <div className={`${styles.searchBarWrapper} ${isMobile && styles.mobile}`}>
       <div className={styles.searchBarIcon}>{Icon}</div>
       <input
         placeholder={placeHolder}
