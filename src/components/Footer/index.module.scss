@@ -15,11 +15,11 @@
 
 @include mobile {
   .footerContainer {
-    height: 10vh;
+    height: 20vh;
   }
 
   .textWrapper {
-    height: 10vh;
+    height: 20vh;
     p {
       @include pretendard-3-6vw-100;
     }
