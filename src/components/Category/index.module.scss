@@ -4,11 +4,10 @@
   top: 0;
   height: 5rem;
   width: 100vw;
-  //overflow: hidden;
   transition: height 1s ease-in-out;
-  margin-top: 3vh;
+  padding-top: 3vh;
 
-  &:hover {
+  padding-bottom &:hover {
     height: auto;
     cursor: pointer;
   }
@@ -19,13 +18,10 @@
 
   .categoryMenuWrapper {
     display: flex;
-    margin: auto;
-    margin-bottom: 1.5vh;
     justify-content: space-around;
     align-items: center;
     padding: 0;
     overflow: visible;
-    margin-top: 1vh;
     .none {
       background-color: none;
     }
@@ -37,32 +33,32 @@
       align-items: center;
       justify-content: center;
       transition: background-color 0.5s ease;
-      margin-bottom: 4rem;
     }
   }
 }
 
 .categoryContainer .detailMenu {
-  z-index: $zindex-fixed;
   background-color: $color-white;
+  z-index: $zindex-popover;
   position: absolute;
   display: flex;
   overflow: visible;
-  margin-bottom: 2rem;
 }
 
 .categoryContainer .detailMenu ul {
   width: 25vw;
-  margin: auto;
+  z-index: $zindex-popover;
   justify-content: space-around;
   padding: 0;
   text-align: center;
 }
 
 .categoryContainer .detailMenu ul li {
+  z-index: $zindex-popover;
+  background-color: $color-white;
   list-style-type: none;
   display: block;
-  padding: 1rem;
+  padding: 3vh;
   @include pretendard-16-100;
   transition: background-color 0.3s ease;
 }
