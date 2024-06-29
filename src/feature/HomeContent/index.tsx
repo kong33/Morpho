@@ -16,18 +16,19 @@ import banner2Mb from '@/public/image/HomePage/homeBanner_mobile/banner2.jpg';
 import banner3Mb from '@/public/image/HomePage/homeBanner_mobile/banner3.jpg';
 import banner4Mb from '@/public/image/HomePage/homeBanner_mobile/banner4.jpg';
 import banner5Mb from '@/public/image/HomePage/homeBanner_mobile/banner5.jpg';
-import middleBanner from '@/public/image/HomePage/homeLowerBanner/homeMiddleBanner4.jpg';
-import middleBannerMB from '@/public/image/HomePage/homeLowerBanner/homeMiddleBanner3MB.jpg';
+import footerBanner from '@/public/image/HomePage/homeBanner/footerBanner.jpg';
+import footerWideBanner from '@/public/image/HomePage/homeBanner/footBannerWide.jpg';
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 
 export default function HomeContent() {
   let SLIDES = [banner1, banner2, banner3, banner4, banner5];
-  let middleBannerImg = middleBanner;
+
+  let lowerBannerImg = footerWideBanner;
   const { isMobile } = useIsMobile();
   if (isMobile) {
     SLIDES = [banner1Mb, banner2Mb, banner3Mb, banner4Mb, banner5Mb];
-    middleBannerImg = middleBannerMB;
+    lowerBannerImg = footerBanner;
   }
 
   return (
@@ -53,7 +54,7 @@ export default function HomeContent() {
       <div className={styles.halfBackground}>
         <div className={styles.middleBanner}>
           <Image
-            src={middleBannerImg}
+            src={lowerBannerImg}
             alt="middleBanner"
             width={0}
             height={0}

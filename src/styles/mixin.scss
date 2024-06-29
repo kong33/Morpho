@@ -21,3 +21,33 @@
     @content;
   }
 }
+
+// $mobile-max-width: 768px;
+// $tablet-min-width: 769px;
+// $tablet-max-width: 1200px;
+// $desktop-min-width: 1201px;
+
+// //mobile first
+// @mixin mobile {
+//   @media (max-width: #{$mobile-max-width}) {
+//     @content;
+//   }
+// }
+// @mixin tablet {
+//   @media (min-width: #{$tablet-min-width}) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop {
+//   @media (min-width: #{$desktop-min-width}) {
+//     @content;
+//   }
+// }
+
+// //pc first
+// @mixin pc-first-tablet {
+//   @media (max-width: #{$tablet-max-width}) {
+//     @content;
+//   }
+// }
